@@ -1,0 +1,43 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.github.johnrengelman.shadow'
+    repositories {
+        mavenCentral()
+    }
+}
+
+project(':server') {
+    apply plugin: 'application'
+    mainClassName = 'server.Main'
+    dependencies {
+        implementation project(':base')
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.7'
+        compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.2'
+        compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.2'
+    }
+    jar {
+        manifest {
+            attributes 'Main-Class': 'server.Main'
+        }
+    }
+}
+
+project(':client') {
+    apply plugin: 'application'
+    mainClassName = 'client.Main'
+    dependencies {
+        implementation project(':base')
+    }
+    run {
+        standardInput = System.in
+    }
+    jar {
+        manifest {
+            attributes 'Main-Class': 'client.Main'
+        }
+    }
+}
