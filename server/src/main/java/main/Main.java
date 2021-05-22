@@ -1,10 +1,11 @@
 package main;
 
-import lab5.commands.*;
-import lab5.io.Console;
-import lab5.io.FileManager;
+import collection.CollectionManager;
+import commands.*;
+import io.FileManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import server.Server;
 
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
@@ -29,22 +30,21 @@ public class Main {
         try {
             file = args[0];
         }catch (ArrayIndexOutOfBoundsException e){
-            Console.printError("Нет файла");
+            Main.logger.error("Нет файла");
         }
-        Console.println("Фаил: " + file);
+        Main.logger.info("Фаил: " + file);
         FileManager fileManager = new FileManager(file);
         CollectionManager collection = new CollectionManager(fileManager);
-        Scanner scanner = new Scanner(System.in, "windows-1251");
-        Console console = new Console(scanner, collection);
-        CommandManager commandManager = new CommandManager(console, scanner,
-                new AbstractCommand[]{new AddCom(collection, console),
-                new AddIfMinCom(collection, console, scanner), new ClearCom(collection),
+        CommandManager commandManager = new CommandManager(
+                new AbstractCommand[]{new AddCom(collection),
+                new AddIfMinCom(collection), new ClearCom(collection),
                 new ExitCom(), new FilterContainsNameCom(collection),
-                new RemoveAnyByHouseCom(collection, console), new PrintAscendingCom(collection),
+                new RemoveAnyByHouseCom(collection), new PrintAscendingCom(collection),
                 new InfoCom(collection), new ShowCom(collection),
                 new RemoveLastCom(collection), new RemoveById(collection),
-                new RemoveGreaterCom(collection, console, scanner), new UpdateIDCom(collection, console),
+                new RemoveGreaterCom(collection), new UpdateIDCom(collection),
                 new SaveCom(collection)});
-        commandManager.ConsoleMod();
+        Server server = new Server(1812, commandManager);
+        server.run();
     }
 }

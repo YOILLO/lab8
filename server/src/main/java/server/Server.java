@@ -1,8 +1,10 @@
 package server;
 
+import commands.CommandManager;
 import main.Main;
 import messages.AnswerMsg;
 import messages.CommandMsg;
+import messages.Status;
 
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -12,12 +14,14 @@ import java.nio.channels.DatagramChannel;
 
 public class Server {
     private int PORT;
-    SocketAddress socketAddress;
-    DatagramChannel datagramChannel;
+    private SocketAddress socketAddress;
+    private DatagramChannel datagramChannel;
     private final int bufferSize = 1024;
+    private CommandManager commandManager;
 
-    public Server (int port){
+    public Server (int port, CommandManager com){
         PORT = port;
+        commandManager = com;
     }
 
     private boolean openSocket(){
@@ -111,6 +115,11 @@ public class Server {
         boolean work = true;
         while (work){
             CommandMsg msg = read();
+            AnswerMsg ans = new AnswerMsg();
+            if(!commandManager.launchCommand(msg, ans)){
+                ans.setStatus(Status.EXIT);
+                work = false;
+            }
 
         }
     }

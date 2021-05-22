@@ -1,5 +1,7 @@
 package io;
 
+import main.Main;
+
 import java.io.*;
 
 /**
@@ -12,7 +14,7 @@ public class ScriptManager {
         try {
             bufferedReader = new BufferedReader(new FileReader(file));
         } catch (IOException e) {
-            Console.printError("Ошибка открытия файла");
+            Main.logger.error("Ошибка открытия файла");
         }
     }
 
@@ -24,7 +26,7 @@ public class ScriptManager {
         try {
             return bufferedReader.readLine();
         } catch (IOException e) {
-            Console.printError("Ошибка чтения файла");
+            Main.logger.error("Ошибка чтения файла");
         }
         return null;
     }

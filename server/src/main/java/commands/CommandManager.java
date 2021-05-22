@@ -12,12 +12,10 @@ import java.util.Scanner;
  * Manager that run all commands
  */
 public class CommandManager {
-    private Scanner scanner;
     private List<commands.AbstractCommand> commands= new ArrayList<>();
     private List<String> files = new ArrayList<String>();
 
-    public CommandManager(Scanner userScan, commands.AbstractCommand[] com){
-        scanner = userScan;
+    public CommandManager(commands.AbstractCommand[] com){
 
         files.clear();
 
@@ -31,7 +29,7 @@ public class CommandManager {
      * Launch console command
      * @return End or not to end
      */
-    private boolean launchCommand(CommandMsg commandMsg, AnswerMsg answerMsg)
+    public boolean launchCommand(CommandMsg commandMsg, AnswerMsg answerMsg)
     {
         Main.logger.info("Вызывается команда " + commandMsg.getCommand());
         if (commandMsg.getCommand().trim().equals("help")) {

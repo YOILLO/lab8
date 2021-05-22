@@ -13,13 +13,11 @@ import java.util.Scanner;
  */
 public class RemoveGreaterCom extends AbstractCommand{
     CollectionManager collection;
-    Scanner scanner;
 
-    public RemoveGreaterCom(CollectionManager col, Scanner sc)
+    public RemoveGreaterCom(CollectionManager col)
     {
         super("remove_greater", " {element} : удалить из коллекции все элементы, превышающие заданный");
         collection = col;
-        scanner = sc;
     }
 
     @Override

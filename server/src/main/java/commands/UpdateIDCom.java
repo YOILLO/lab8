@@ -32,7 +32,12 @@ public class UpdateIDCom extends AbstractCommand {
             return true;
         }
         Flat flt = new Flat((RowFlat)objArg, id);
-        collection.replace(flt);
+        if (collection.replace(flt)){
+            answerMsg.addMsg("Успешно заменено");
+        }
+        else {
+            answerMsg.addMsg("Нет такого элемента");
+        }
         return true;
     }
 }

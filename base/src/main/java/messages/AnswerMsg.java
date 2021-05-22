@@ -18,4 +18,8 @@ public class AnswerMsg implements Serializable {
         answer += "error: " + msg + "\n";
     }
 
+    public void setStatus(Status st){
+        status = st;
+    }
+
 }

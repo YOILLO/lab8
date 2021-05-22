@@ -12,13 +12,11 @@ import java.util.Scanner;
  */
 public class AddIfMinCom extends AbstractCommand{
     private CollectionManager collection;
-    private Scanner scanner;
 
-    public AddIfMinCom(CollectionManager col, Scanner sc)
+    public AddIfMinCom(CollectionManager col)
     {
         super("add_if_min", " {element}: добавить новый элемент, если его значение меньше, чем у наименьшего");
         collection = col;
-        scanner = sc;
     }
 
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
