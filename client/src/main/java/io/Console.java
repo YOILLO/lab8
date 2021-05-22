@@ -1,10 +1,8 @@
 package io;
 
-import lab5.data.*;
-import lab5.exeptions.EmptyIO;
-import lab5.exeptions.WrongFormat;
-import lab5.main.CollectionManager;
-
+import data.*;
+import exceptions.WrongFormat;
+import exceptions.EmptyIO;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -13,22 +11,18 @@ import java.util.Scanner;
  */
 public class Console {
     private Scanner userScaner;
-    private CollectionManager myCollectoin;
 
-    public Console(Scanner sc, CollectionManager collection)
+    public Console(Scanner sc)
     {
         userScaner = sc;
-        myCollectoin = collection;
     }
 
     /**
      * Get flat from user command
      * @return Got flat
      */
-    public Flat askFlat()
+    public RowFlat askFlat()
     {
-        int Id = myCollectoin.generateNextId();
-        println("ID = " + Integer.toString(Id));
 
         String name = null;
         while (name == null) {
@@ -258,18 +252,37 @@ public class Console {
         }
 
 
-        return new Flat(Id, name, new Coordinates(x,y), java.time.LocalDate.now(), erea,
-                numberOfRooms, price, furnish, transport, new House(houseName, year, numberOfFlors));
+        return new RowFlat(name, new Coordinates(x,y), erea,
+                numberOfRooms, price, furnish, transport,
+                new House(houseName, year, numberOfFlors));
     }
 
     /**
      * Get flat from user but with consume ID
-     * @param id ID
      * @return Flat
      */
-    public Flat askFlatWithID(int id)
+    public Flat askFlatWithID()
     {
-        int Id = id;
+        int Id = 0;
+        while (true) {
+            try {
+                println("Ведите ID: ");
+                String st = userScaner.nextLine().trim();
+                if (st == null) throw new EmptyIO();
+                if (st.equals("")) throw new EmptyIO();
+                Id = Integer.parseInt(st);
+                if (Id < 0) throw new WrongFormat();
+                break;
+            } catch (EmptyIO e) {
+                printError("Строка не может быть пустой");
+            } catch (WrongFormat e){
+                printError("Неверный формат, число должно быть больше 0");
+            }catch (NumberFormatException exception) {
+                printError("Должно быть представлено числом!");
+            }catch (NoSuchElementException exception) {
+                printError("имя не распознано!");
+            }
+        }
 
         println("ID = " + Integer.toString(Id));
 

@@ -21,7 +21,7 @@ public class FilterContainsNameCom extends AbstractCommand {
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
         try{
             if (argument.isEmpty()) throw new WrongFormat();
-            answerMsg.addMsg("Ищу по шаблону " + argument.trim());
+            answerMsg.addMsg("ищу по шаблону " + argument.trim());
             String info = collection.nameFillteredInfo(argument.trim());
             if (info.isEmpty())
             {

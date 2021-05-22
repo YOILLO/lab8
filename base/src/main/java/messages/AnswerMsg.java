@@ -22,4 +22,12 @@ public class AnswerMsg implements Serializable {
         status = st;
     }
 
+    public String getAnswer(){
+        return answer;
+    }
+
+    public Status getStatus(){
+        return status;
+    }
+
 }

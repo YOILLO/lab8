@@ -1,6 +1,8 @@
 package data;
 
-public class RowFlat {
+import java.io.Serializable;
+
+public class RowFlat implements Serializable {
 
     private String name; //Поле не может быть null, Строка не может быть пустой
 

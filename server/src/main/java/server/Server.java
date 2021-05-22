@@ -120,7 +120,8 @@ public class Server {
                 ans.setStatus(Status.EXIT);
                 work = false;
             }
-
+            sendMsg(ans);
         }
+        close();
     }
 }
