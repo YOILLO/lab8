@@ -1,0 +1,44 @@
+io/FileManager.java
+ io.FileManager
+commands/ExitCom.java
+ commands.ExitCom
+commands/AbstractCommand.java
+ commands.AbstractCommand
+commands/ICommand.java
+ commands.ICommand
+io/ScriptManager.java
+ io.ScriptManager
+commands/FilterContainsNameCom.java
+ commands.FilterContainsNameCom
+commands/InfoCom.java
+ commands.InfoCom
+commands/ShowCom.java
+ commands.ShowCom
+commands/UpdateIDCom.java
+ commands.UpdateIDCom
+commands/RemoveLastCom.java
+ commands.RemoveLastCom
+commands/AddIfMinCom.java
+ commands.AddIfMinCom
+commands/CommandManager.java
+ commands.CommandManager
+commands/RemoveById.java
+ commands.RemoveById
+commands/ClearCom.java
+ commands.ClearCom
+collection/CollectionManager.java
+ collection.CollectionManager
+commands/SaveCom.java
+ commands.SaveCom
+commands/PrintAscendingCom.java
+ commands.PrintAscendingCom
+commands/RemoveAnyByHouseCom.java
+ commands.RemoveAnyByHouseCom
+commands/RemoveGreaterCom.java
+ commands.RemoveGreaterCom
+commands/AddCom.java
+ commands.AddCom
+server/Server.java
+ server.Server
+main/Main.java
+ main.Main

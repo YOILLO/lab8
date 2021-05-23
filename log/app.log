@@ -1,0 +1,20 @@
+10:43:01.366 [main] INFO  My logger - Фаил: file.csv 
+10:43:01.394 [main] INFO  My logger - Коллекция успешно считана 
+10:43:01.416 [main] INFO  My logger - Открываю сокет 
+10:43:01.436 [main] INFO  My logger - Сокет открыт 
+10:43:01.436 [main] INFO  My logger - Ожидаю входящее сообщение 
+10:43:28.960 [main] INFO  My logger - Р¤Р°РёР»: file.csv 
+10:43:29.089 [main] INFO  My logger - РљРѕР»Р»РµРєС†РёСЏ СѓСЃРїРµС€РЅРѕ СЃС‡РёС‚Р°РЅР° 
+10:43:29.131 [main] INFO  My logger - РћС‚РєСЂС‹РІР°СЋ СЃРѕРєРµС‚ 
+10:43:29.141 [main] INFO  My logger - РЎРѕРєРµС‚ РѕС‚РєСЂС‹С‚ 
+10:43:29.141 [main] INFO  My logger - РћР¶РёРґР°СЋ РІС…РѕРґСЏС‰РµРµ СЃРѕРѕР±С‰РµРЅРёРµ 
+10:49:44.010 [main] INFO  My logger - Фаил: file.csv 
+10:49:44.040 [main] INFO  My logger - Коллекция успешно считана 
+10:49:44.065 [main] INFO  My logger - Открываю сокет 
+10:49:44.079 [main] INFO  My logger - Сокет открыт 
+10:49:44.080 [main] INFO  My logger - Ожидаю входящее сообщение 
+10:49:51.562 [main] INFO  My logger - Фаил: file.csv 
+10:49:51.590 [main] INFO  My logger - Коллекция успешно считана 
+10:49:51.614 [main] INFO  My logger - Открываю сокет 
+10:49:51.628 [main] INFO  My logger - Сокет открыт 
+10:49:51.629 [main] INFO  My logger - Ожидаю входящее сообщение 
