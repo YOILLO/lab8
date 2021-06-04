@@ -22,7 +22,7 @@ public class Main {
         }
         Scanner scanner = new Scanner(System.in, "windows-1251");
         Console console = new Console(scanner);
-        Client client = new Client("localhost", 1812, console, scanner);
+        Client client = new Client("localhost", 1812, console, scanner, 30000);
 
         client.run();
     }

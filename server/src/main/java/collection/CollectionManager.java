@@ -9,6 +9,7 @@ import java.util.Comparator;
 import java.util.Vector;
 import java.util.regex.Pattern;
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 /**
  * Manager of main collection
@@ -47,7 +48,7 @@ public class CollectionManager {
      * Add to collection
      * @param fl Flat
      */
-    public void AddToCollection(Flat fl)
+    public void addToCollection(Flat fl)
     {
         myCollection.add(fl);
     }
@@ -55,7 +56,7 @@ public class CollectionManager {
     /**
      * Clear collection command
      */
-    public void ClearCollection()
+    public void clearCollection()
     {
         myCollection.clear();
     }
@@ -119,7 +120,7 @@ public class CollectionManager {
      */
     public boolean deleteByHouse(House hs)
     {
-        for (Flat fl : myCollection)
+        /*for (Flat fl : myCollection)
         {
             if(fl.getHouse().equals(hs))
             {
@@ -127,7 +128,9 @@ public class CollectionManager {
                 return true;
             }
         }
-        return false;
+        return false;*/
+        myCollection.removeIf(flat -> flat.getHouse().equals(hs));
+        return true;
     }
 
     /**
@@ -136,7 +139,7 @@ public class CollectionManager {
      */
     public boolean deleteByID(int id)
     {
-        for (Flat fl : myCollection)
+        /*for (Flat fl : myCollection)
         {
             if(fl.getId() == id)
             {
@@ -144,7 +147,9 @@ public class CollectionManager {
                 return true;
             }
         }
-        return false;
+        return false;*/
+        myCollection.removeIf(flat -> flat.getId() == id);
+        return true;
     }
 
     /**
@@ -171,15 +176,18 @@ public class CollectionManager {
      */
     public boolean replace(Flat ft)
     {
-        for (Flat fl : myCollection)
+        myCollection = myCollection.stream()
+                .map(flat -> flat.getId() == ft.getId() ? ft : flat)
+                .collect(Collectors.toCollection(Vector::new));
+        /*for (Flat fl : myCollection)
         {
             if (fl.getId() == ft.getId())
             {
                 Collections.replaceAll(myCollection, fl, ft);
                 return true;
             }
-        }
-        return false;
+        }*/
+        return true;
     }
 
     /**
@@ -205,13 +213,16 @@ public class CollectionManager {
      */
     public String printNormal()
     {
-        String out = "";
+        /*String out = "";
         for (Flat fl : myCollection)
         {
             out += fl.toString();
             out += "\n\n";
-        }
-        return out;
+        }*/
+        if (myCollection.isEmpty())
+            return "Коллекция пуста";
+
+        return myCollection.stream().reduce("", (sum, m) -> sum += m + "\n\n", (sum1, sum2) -> sum1 + sum2).trim();
     }
 
     @Override

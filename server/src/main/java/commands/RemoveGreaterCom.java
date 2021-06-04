@@ -3,6 +3,7 @@ package commands;
 import data.*;
 import collection.CollectionManager;
 import messages.AnswerMsg;
+import messages.Status;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -24,6 +25,7 @@ public class RemoveGreaterCom extends AbstractCommand{
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
         int ans = collection.deleteGreater((Flat) objArg);
         answerMsg.addMsg("Удалено " + ans + " элементов");
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

@@ -2,6 +2,7 @@ package commands;
 
 import collection.CollectionManager;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Information about collection command
@@ -19,6 +20,7 @@ public class InfoCom extends AbstractCommand{
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
         answerMsg.addMsg("инфрмация о коллекции:");
         answerMsg.addMsg(collection.toString());
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

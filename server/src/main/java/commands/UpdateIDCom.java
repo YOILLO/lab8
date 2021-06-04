@@ -4,6 +4,7 @@ import data.Flat;
 import collection.CollectionManager;
 import data.RowFlat;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Update id command
@@ -38,6 +39,7 @@ public class UpdateIDCom extends AbstractCommand {
         else {
             answerMsg.addMsg("Нет такого элемента");
         }
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

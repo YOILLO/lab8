@@ -2,6 +2,7 @@ package commands;
 
 import collection.CollectionManager;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Show collection command
@@ -18,6 +19,7 @@ public class ShowCom extends AbstractCommand{
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
         answerMsg.addMsg("Колекция:");
         answerMsg.addMsg(collection.printNormal());
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

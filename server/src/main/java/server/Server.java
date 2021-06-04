@@ -19,26 +19,26 @@ public class Server {
     private final int bufferSize = 1024;
     private CommandManager commandManager;
 
-    public Server (int port, CommandManager com){
+    public Server(int port, CommandManager com) {
         PORT = port;
         commandManager = com;
     }
 
-    private boolean openSocket(){
+    private boolean openSocket() {
         try {
             Main.logger.info("Открываю сокет");
             socketAddress = new InetSocketAddress(PORT);
             datagramChannel = DatagramChannel.open();
             datagramChannel.bind(socketAddress);
             Main.logger.info("Сокет открыт");
-        } catch (IllegalArgumentException | IOException e){
+        } catch (IllegalArgumentException | IOException e) {
             Main.logger.error("Ошибка открытия сокета");
             return false;
         }
         return true;
     }
 
-    private CommandMsg read(){
+    private CommandMsg read() {
 
         ByteBuffer buffer = ByteBuffer.wrap(new byte[bufferSize]);
         try {
@@ -51,8 +51,8 @@ public class Server {
         return null;
     }
 
-    private CommandMsg deSerialize(byte[] data){
-        try{
+    private CommandMsg deSerialize(byte[] data) {
+        try {
             ObjectInputStream objectInputStream = new ObjectInputStream(new ByteArrayInputStream(data));
             CommandMsg commandMsg = (CommandMsg) objectInputStream.readObject();
             objectInputStream.close();
@@ -65,7 +65,7 @@ public class Server {
         return null;
     }
 
-    private void sendMsg(AnswerMsg answerMsg){
+    private void sendMsg(AnswerMsg answerMsg) {
         try {
             Main.logger.info("Начинаю отправку ответа");
             byte[] bf = serializer(answerMsg);
@@ -79,8 +79,8 @@ public class Server {
         }
     }
 
-    private byte[] serializer(AnswerMsg answerMsg){
-        try{
+    private byte[] serializer(AnswerMsg answerMsg) {
+        try {
             Main.logger.info("Начинаю сериализацию");
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(bufferSize);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
@@ -97,7 +97,7 @@ public class Server {
         return null;
     }
 
-    private void close(){
+    private void close() {
         try {
             Main.logger.info("Закрывю канал");
             datagramChannel.close();
@@ -107,21 +107,32 @@ public class Server {
         }
     }
 
-    public void run(){
-        if(!openSocket()) {
+    static private boolean work = true;
+
+    public void run() {
+        if (!openSocket()) {
             Main.logger.error("Неполучилось открыть сокет");
             return;
         }
-        boolean work = true;
-        while (work){
+        work = true;
+        while (work) {
             CommandMsg msg = read();
             AnswerMsg ans = new AnswerMsg();
-            if(!commandManager.launchCommand(msg, ans)){
+            ans.setStatus(Status.ERROR);
+            if (msg.getCommand().trim().equals("save")) {
+                ans.addError("Нет права на сохранения");
+            } else if (!commandManager.launchCommand(msg, ans)) {
                 ans.setStatus(Status.EXIT);
-                work = false;
+                commandManager.launchCommand(new CommandMsg("save", "", null), new AnswerMsg());
             }
             sendMsg(ans);
         }
+        commandManager.launchCommand(new CommandMsg("save", "", null), new AnswerMsg());
         close();
+    }
+
+
+    public static void interrupt() {
+        work = false;
     }
 }

@@ -3,6 +3,7 @@ package messages;
 import java.io.Serializable;
 
 public class AnswerMsg implements Serializable {
+
     String answer;
     Status status;
 
@@ -15,7 +16,7 @@ public class AnswerMsg implements Serializable {
     }
 
     public void addError(String msg){
-        answer += "error: " + msg + "\n";
+        answer += "err: " + msg + "\n";
     }
 
     public void setStatus(Status st){

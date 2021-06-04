@@ -2,6 +2,7 @@ package commands;
 
 import collection.CollectionManager;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Print sorted command
@@ -19,6 +20,7 @@ public class PrintAscendingCom extends commands.AbstractCommand {
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
         answerMsg.addMsg("Отсортированная коллекция:");
         answerMsg.addMsg(collection.printSort());
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

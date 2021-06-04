@@ -4,6 +4,7 @@ import data.Flat;
 import collection.CollectionManager;
 import data.RowFlat;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Add element command
@@ -19,9 +20,9 @@ public class AddCom extends AbstractCommand{
 
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
         RowFlat fl = (RowFlat) objArg;
-        answerMsg.addMsg(fl.toString());
-        collection.AddToCollection(new Flat(fl, collection.generateNextId()));
-
+        answerMsg.addMsg("Добавлен элемент с ID " + collection.generateNextId());
+        collection.addToCollection(new Flat(fl, collection.generateNextId()));
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

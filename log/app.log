@@ -18,3 +18,42 @@
 10:49:51.614 [main] INFO  My logger - Открываю сокет 
 10:49:51.628 [main] INFO  My logger - Сокет открыт 
 10:49:51.629 [main] INFO  My logger - Ожидаю входящее сообщение 
+10:52:38.714 [main] INFO  My logger - Фаил: file.csv 
+10:52:38.863 [main] INFO  My logger - Коллекция успешно считана 
+10:52:38.885 [main] INFO  My logger - Открываю сокет 
+10:52:38.895 [main] INFO  My logger - Сокет открыт 
+10:52:38.895 [main] INFO  My logger - Ожидаю входящее сообщение 
+11:42:06.311 [main] INFO  My logger - Фаил: file.csv 
+11:42:06.481 [main] INFO  My logger - Коллекция успешно считана 
+11:42:06.512 [main] INFO  My logger - Открываю сокет 
+11:42:06.518 [main] INFO  My logger - Сокет открыт 
+11:42:06.518 [main] INFO  My logger - Ожидаю входящее сообщение 
+11:42:14.401 [Thread-0] INFO  My logger - Вызывается команда save 
+11:42:14.401 [Thread-0] INFO  My logger - Успешно записано 
+11:43:07.451 [main] INFO  My logger - Начинаю отправку ответа 
+11:43:07.452 [main] INFO  My logger - Начинаю сериализацию 
+11:43:07.457 [main] INFO  My logger - Сереализировал 
+11:43:07.458 [main] INFO  My logger - Отправлено 
+11:43:07.458 [main] INFO  My logger - Ожидаю входящее сообщение 
+11:43:12.428 [main] INFO  My logger - Вызывается команда  
+11:43:12.428 [main] INFO  My logger - Начинаю отправку ответа 
+11:43:12.428 [main] INFO  My logger - Начинаю сериализацию 
+11:43:12.429 [main] INFO  My logger - Сереализировал 
+11:43:12.429 [main] INFO  My logger - Отправлено 
+11:43:12.429 [main] INFO  My logger - Ожидаю входящее сообщение 
+11:44:46.054 [main] INFO  My logger - Начинаю отправку ответа 
+11:44:46.054 [main] INFO  My logger - Начинаю сериализацию 
+11:44:46.061 [main] INFO  My logger - Сереализировал 
+11:44:46.061 [main] INFO  My logger - Отправлено 
+11:44:46.061 [main] INFO  My logger - Ожидаю входящее сообщение 
+12:47:07.589 [main] INFO  My logger - Фаил: file.csv 
+12:47:07.900 [main] INFO  My logger - Коллекция успешно считана 
+12:47:08.267 [main] INFO  My logger - Открываю сокет 
+12:47:08.277 [main] INFO  My logger - Сокет открыт 
+12:47:08.277 [main] INFO  My logger - Ожидаю входящее сообщение 
+12:47:23.091 [main] INFO  My logger - Вызывается команда show 
+12:47:23.100 [main] INFO  My logger - Начинаю отправку ответа 
+12:47:23.101 [main] INFO  My logger - Начинаю сериализацию 
+12:47:23.108 [main] INFO  My logger - Сереализировал 
+12:47:23.109 [main] INFO  My logger - Отправлено 
+12:47:23.110 [main] INFO  My logger - Ожидаю входящее сообщение 

@@ -3,9 +3,7 @@ package commands;
 import data.Flat;
 import collection.CollectionManager;
 import messages.AnswerMsg;
-
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import messages.Status;
 
 /**
  * Add if element is less then min in collection
@@ -20,7 +18,21 @@ public class AddIfMinCom extends AbstractCommand{
     }
 
     public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
-
+        Flat fl = (Flat) objArg;
+        Flat first = collection.getFirst();
+        if (first == null) {
+            answerMsg.addError("Коллекция пуста, ошибка");
+            return true;
+        }
+        if (first.getId() > fl.getId())
+        {
+            collection.addToCollection(fl);
+            answerMsg.addMsg("Добавлено");
+        }
+        else {
+            answerMsg.addMsg("Недобавлено");
+        }
+        answerMsg.setStatus(Status.OK);
         return true;
 
     }

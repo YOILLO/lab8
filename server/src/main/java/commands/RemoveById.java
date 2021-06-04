@@ -2,6 +2,7 @@ package commands;
 
 import collection.CollectionManager;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Remove by id
@@ -28,6 +29,7 @@ public class RemoveById extends AbstractCommand{
         {
             answerMsg.addError("ID должен быть числом");
         }
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

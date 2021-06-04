@@ -9,10 +9,7 @@ import javax.xml.crypto.Data;
 import io.Console;
 
 import java.io.*;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetSocketAddress;
-import java.net.SocketAddress;
+import java.net.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.util.Scanner;
@@ -26,14 +23,16 @@ public class Client {
     private SocketAddress socketAddress;
     private DatagramSocket datagramSocket;
     private final int bufferSize = 1024;
+    private int TIMEOUT;
     private Console console;
     private Scanner scanner;
 
-    public Client (String adrres , int port, Console con, Scanner sc){
+    public Client (String adrres , int port, Console con, Scanner sc, int timeout){
         PORT = port;
         console = con;
         ADDR = adrres;
         scanner = sc;
+        TIMEOUT = timeout;
     }
 
     private boolean openSocket(){
@@ -41,6 +40,7 @@ public class Client {
             println("Открываю сокет");
             socketAddress = new InetSocketAddress(ADDR ,PORT);
             datagramSocket = new DatagramSocket();
+            datagramSocket.setSoTimeout(TIMEOUT);
             println("Сокет открыт");
         } catch (IllegalArgumentException | IOException e){
             printError("Ошибка открытия сокета");
@@ -57,8 +57,10 @@ public class Client {
             DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length);
             datagramSocket.receive(datagramPacket);
             return deSerialize(datagramPacket.getData());
+        } catch (SocketTimeoutException ex){
+            printError("Нет ответа от сервера");
         } catch (IOException e) {
-            printError("Ошибка чтения файла");
+            printError("Ошибка получения файла");
         }
         return null;
     }
@@ -113,14 +115,15 @@ public class Client {
     }
 
     public void run() {
-        if (!openSocket()) {
-            printError("Неполучилось открыть сокет");
-            return;
+        while (!openSocket()) {
+            printError("Неполучилось открыть сокет, переподключаюсь");
         }
         boolean work = true;
         while (work) {
-            String[] userCommand;
-            userCommand = (scanner.nextLine().trim() + " ").split(" ", 2);
+            String[] userCommand = {"", ""};
+            while (userCommand[0].equals("")) {
+                userCommand = (scanner.nextLine().trim() + " ").split(" ", 2);
+            }
             Serializable obj = null;
             if (userCommand[0].trim().equals("add")){
                 obj = console.askFlat();
@@ -134,7 +137,12 @@ public class Client {
             CommandMsg commandMsg = new CommandMsg(userCommand[0], userCommand[1], obj);
             sendMsg(commandMsg);
             AnswerMsg answerMsg = read();
-            println(answerMsg.getAnswer());
+            if (answerMsg == null){
+                continue;
+            }
+            println(answerMsg.getAnswer().trim());
+            if (answerMsg.getStatus() == null)
+                continue;
             if (answerMsg.getStatus().equals(Status.EXIT)){
                 work = false;
             }

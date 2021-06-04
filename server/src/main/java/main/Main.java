@@ -3,11 +3,14 @@ package main;
 import collection.CollectionManager;
 import commands.*;
 import io.FileManager;
+import messages.AnswerMsg;
+import messages.CommandMsg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import server.Server;
 
 import java.io.PrintStream;
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
@@ -45,6 +48,24 @@ public class Main {
                 new RemoveGreaterCom(collection), new UpdateIDCom(collection),
                 new SaveCom(collection)});
         Server server = new Server(1812, commandManager);
+
+        Runnable save = () -> {
+            Scanner scanner = new Scanner(System.in, "windows-1251");
+            while (true){
+                String com = scanner.nextLine();
+                if (com.trim().equals("save")){
+                    commandManager.launchCommand(new CommandMsg("save", "", null), new AnswerMsg());
+                } else if (com.trim().equals("stop_server")){
+                    Server.interrupt();
+                    break;
+                }
+            }
+        };
+
+        Thread th = new Thread(save);
+
+        th.start();
+
         server.run();
     }
 }

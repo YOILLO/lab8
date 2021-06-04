@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionManager;
 import exceptions.WrongFormat;
 import messages.AnswerMsg;
+import messages.Status;
 
 import java.util.regex.PatternSyntaxException;
 
@@ -40,6 +41,7 @@ public class FilterContainsNameCom extends AbstractCommand {
         {
             answerMsg.addError("Неверный шаблон");
         }
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

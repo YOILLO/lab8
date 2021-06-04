@@ -2,6 +2,7 @@ package commands;
 
 import collection.CollectionManager;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Remove last command
@@ -21,6 +22,7 @@ public class RemoveLastCom extends commands.AbstractCommand {
             answerMsg.addMsg("Последний элемент удален");
         else
             answerMsg.addMsg("Коллекция пуста");
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionManager;
 import data.House;
 import messages.AnswerMsg;
+import messages.Status;
 
 /**
  * Remove one element by house
@@ -23,6 +24,7 @@ public class RemoveAnyByHouseCom extends AbstractCommand{
         }else {
             answerMsg.addMsg("Нет такого элемента");
         }
+        answerMsg.setStatus(Status.OK);
         return true;
     }
 }

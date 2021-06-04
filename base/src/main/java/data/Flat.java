@@ -46,7 +46,7 @@ public class Flat implements Serializable {
     }
 
     public Flat (RowFlat rowFlat, int Id){
-        id = id;
+        id = Id;
         name = rowFlat.getName();
         coordinates = rowFlat.getCoordinates();
         creationDate = LocalDate.now();
