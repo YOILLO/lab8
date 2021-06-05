@@ -1,6 +1,8 @@
 package data;
 
 
+import messages.User;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
@@ -30,8 +32,10 @@ public class Flat implements Serializable {
 
     private House house; //Поле не может быть null
 
+    private User user;
+
     public Flat (int Id, String nm, Coordinates cd, java.time.LocalDate crD, Integer ea, Integer nOR, Float pc, Furnish fsh,
-                 Transport ts, House hs)
+                 Transport ts, House hs, User us)
     {
         id = Id;
         name = nm;
@@ -43,9 +47,10 @@ public class Flat implements Serializable {
         furnish = fsh;
         transport = ts;
         house = hs;
+        user = us;
     }
 
-    public Flat (RowFlat rowFlat, int Id){
+    public Flat (RowFlat rowFlat, int Id, User us){
         id = Id;
         name = rowFlat.getName();
         coordinates = rowFlat.getCoordinates();
@@ -56,6 +61,7 @@ public class Flat implements Serializable {
         furnish = rowFlat.getFurnish();
         transport = rowFlat.getTransport();
         house = rowFlat.getHouse();
+        user = us;
     }
 
     public int getId()
@@ -100,6 +106,14 @@ public class Flat implements Serializable {
     public House getHouse()
     {
         return house;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int compareTo(Flat flat)
