@@ -6,11 +6,13 @@ public class CommandMsg implements Serializable {
     private String command;
     private String arg;
     private Serializable objArg;
+    private User user;
 
-    public CommandMsg(String com, String ar, Serializable obAr){
+    public CommandMsg(String com, String ar, Serializable obAr, User us){
         command = com;
         arg = ar;
         objArg = obAr;
+        user = us;
     }
 
     public Serializable getObjArg() {
@@ -23,5 +25,13 @@ public class CommandMsg implements Serializable {
 
     public String getCommand() {
         return command;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

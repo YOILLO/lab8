@@ -1,3 +1,17 @@
+commands/AbstractCommand.java
+ commands.AbstractCommand
+io/ScriptManager.java
+ io.ScriptManager
+commands/ICommand.java
+ commands.ICommand
+database_managers/DatabaseUserManager.java
+ database_managers.DatabaseUserManager
+server/AnswerHandler.java
+ server.AnswerHandler
+commands/ExitCom.java
+ commands.ExitCom
+database_managers/DatabaseManager.java
+ database_managers.DatabaseManager
 commands/AddCom.java
  commands.AddCom
 commands/FilterContainsNameCom.java
@@ -12,10 +26,6 @@ commands/RemoveLastCom.java
  commands.RemoveLastCom
 commands/AddIfMinCom.java
  commands.AddIfMinCom
-commands/RemoveGreaterCom.java
- commands.RemoveGreaterCom
-commands/ExitCom.java
- commands.ExitCom
 commands/RemoveById.java
  commands.RemoveById
 commands/ClearCom.java
@@ -24,21 +34,19 @@ collection/CollectionManager.java
  collection.CollectionManager
 commands/SaveCom.java
  commands.SaveCom
-commands/AbstractCommand.java
- commands.AbstractCommand
-commands/PrintAscendingCom.java
- commands.PrintAscendingCom
-commands/ICommand.java
- commands.ICommand
+database_managers/DatabaseCollectionManager.java
+ database_managers.DatabaseCollectionManager
 commands/RemoveAnyByHouseCom.java
  commands.RemoveAnyByHouseCom
-io/FileManager.java
- io.FileManager
+commands/PrintAscendingCom.java
+ commands.PrintAscendingCom
+commands/RemoveGreaterCom.java
+ commands.RemoveGreaterCom
+server/RequestHandler.java
+ server.RequestHandler
 server/Server.java
  server.Server
 main/Main.java
  main.Main
 commands/CommandManager.java
  commands.CommandManager
-io/ScriptManager.java
- io.ScriptManager

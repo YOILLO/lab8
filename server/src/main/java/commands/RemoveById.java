@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionManager;
 import messages.AnswerMsg;
 import messages.Status;
+import messages.User;
 
 /**
  * Remove by id
@@ -17,7 +18,7 @@ public class RemoveById extends AbstractCommand{
     }
 
     @Override
-    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
+    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user) {
         try {
             if (collection.deleteByID(Integer.parseInt(argument.trim())))
                 answerMsg.addMsg("Успешно удалено");

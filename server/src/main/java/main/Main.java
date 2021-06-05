@@ -2,7 +2,9 @@ package main;
 
 import collection.CollectionManager;
 import commands.*;
-import io.FileManager;
+import database_managers.DatabaseCollectionManager;
+import database_managers.DatabaseManager;
+import database_managers.DatabaseUserManager;
 import messages.AnswerMsg;
 import messages.CommandMsg;
 import org.slf4j.Logger;
@@ -10,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import server.Server;
 
 import java.io.PrintStream;
-import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
@@ -29,15 +30,10 @@ public class Main {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        String file = "";
-        try {
-            file = args[0];
-        }catch (ArrayIndexOutOfBoundsException e){
-            Main.logger.error("Нет файла");
-        }
-        Main.logger.info("Фаил: " + file);
-        FileManager fileManager = new FileManager(file);
-        CollectionManager collection = new CollectionManager(fileManager);
+        DatabaseManager databaseManager = new DatabaseManager("jdbc:postgresql://pg:5432/studs", "s311772", "axu862");
+        DatabaseUserManager databaseUserManager = new DatabaseUserManager(databaseManager);
+        DatabaseCollectionManager databaseCollectionManager = new DatabaseCollectionManager(databaseManager, databaseUserManager);
+        CollectionManager collection = new CollectionManager(databaseCollectionManager);
         CommandManager commandManager = new CommandManager(
                 new AbstractCommand[]{new AddCom(collection),
                 new AddIfMinCom(collection), new ClearCom(collection),
@@ -46,15 +42,14 @@ public class Main {
                 new InfoCom(collection), new ShowCom(collection),
                 new RemoveLastCom(collection), new RemoveById(collection),
                 new RemoveGreaterCom(collection), new UpdateIDCom(collection),
-                new SaveCom(collection)});
-        Server server = new Server(1812, commandManager);
+                new SaveCom(collection)}, databaseUserManager);
+        Server server = new Server(1812, commandManager, databaseUserManager);
 
         Runnable save = () -> {
             Scanner scanner = new Scanner(System.in, "windows-1251");
             while (true){
                 String com = scanner.nextLine();
                 if (com.trim().equals("save")){
-                    commandManager.launchCommand(new CommandMsg("save", "", null), new AnswerMsg());
                 } else if (com.trim().equals("stop_server")){
                     Server.interrupt();
                     break;

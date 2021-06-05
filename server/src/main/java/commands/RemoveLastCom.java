@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionManager;
 import messages.AnswerMsg;
 import messages.Status;
+import messages.User;
 
 /**
  * Remove last command
@@ -17,7 +18,7 @@ public class RemoveLastCom extends commands.AbstractCommand {
     }
 
     @Override
-    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
+    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user) {
         if(collection.removeLast())
             answerMsg.addMsg("Последний элемент удален");
         else

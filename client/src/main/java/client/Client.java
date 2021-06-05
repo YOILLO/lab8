@@ -7,6 +7,7 @@ import messages.Status;
 
 import javax.xml.crypto.Data;
 import io.Console;
+import messages.User;
 
 import java.io.*;
 import java.net.*;
@@ -118,6 +119,44 @@ public class Client {
         while (!openSocket()) {
             printError("Неполучилось открыть сокет, переподключаюсь");
         }
+        boolean isNotReady = true;
+        User user = null;
+        while (isNotReady){
+            println("Are you registered?");
+            boolean yesOrNo = console.askYesOrNo();
+            if (yesOrNo){
+                println("Enter username:");
+                String name = console.getString();
+                println("Enter password:");
+                String pass = console.getString();
+                user = new User(name, pass);
+                user.hash();
+                sendMsg(new CommandMsg("enter", "", null, user));
+                AnswerMsg answerMsg = read();
+                if (answerMsg.getStatus().equals(Status.OK)){
+                    println("Успешно вошел");
+                    isNotReady = false;
+                } else {
+                    println("Неверный логин или пароль");
+                }
+            }
+            else {
+                println("Enter username:");
+                String name = console.getString();
+                println("Enter password:");
+                String pass = console.getString();
+                user = new User(name, pass);
+                user.hash();
+                sendMsg(new CommandMsg("register", "", null, user));
+                AnswerMsg answerMsg = read();
+                if (answerMsg.getStatus().equals(Status.OK)){
+                    println("Успешно зарегестрирован");
+                    isNotReady = false;
+                } else {
+                    println("Ошибка регистрации");
+                }
+            }
+        }
         boolean work = true;
         while (work) {
             String[] userCommand = {"", ""};
@@ -125,16 +164,20 @@ public class Client {
                 userCommand = (scanner.nextLine().trim() + " ").split(" ", 2);
             }
             Serializable obj = null;
-            if (userCommand[0].trim().equals("add")){
+            if (userCommand[0].trim().equals("add")) {
                 obj = console.askFlat();
-            } else if (userCommand[0].trim().equals("update")){
+            } else if (userCommand[0].trim().equals("update")) {
                 obj = console.askFlat();
-            } else if (userCommand[0].trim().equals("remove_any_by_house")){
+            } else if (userCommand[0].trim().equals("remove_any_by_house")) {
                 obj = console.askHouse();
-            } else if (userCommand[0].trim().equals("remove_greater")){
-                obj = console.askFlatWithID();
+            } else if (userCommand[0].trim().equals("remove_greater")) {
+                obj = console.askFlat();
+            } else if (userCommand[0].trim().equals("register")) {
+
+            } else if (userCommand[0].trim().equals("enter")) {
+
             }
-            CommandMsg commandMsg = new CommandMsg(userCommand[0], userCommand[1], obj);
+            CommandMsg commandMsg = new CommandMsg(userCommand[0], userCommand[1], obj, user);
             sendMsg(commandMsg);
             AnswerMsg answerMsg = read();
             if (answerMsg == null){

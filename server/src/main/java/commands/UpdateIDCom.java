@@ -1,10 +1,12 @@
 package commands;
 
+import com.sun.rowset.internal.Row;
 import data.Flat;
 import collection.CollectionManager;
 import data.RowFlat;
 import messages.AnswerMsg;
 import messages.Status;
+import messages.User;
 
 /**
  * Update id command
@@ -19,7 +21,7 @@ public class UpdateIDCom extends AbstractCommand {
     }
 
     @Override
-    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
+    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user) {
         int id;
         if (argument.equals(""))
         {
@@ -32,8 +34,8 @@ public class UpdateIDCom extends AbstractCommand {
             answerMsg.addError("ID долже быть числом");
             return true;
         }
-        Flat flt = new Flat((RowFlat)objArg, id);
-        if (collection.replace(flt)){
+        RowFlat flt = (RowFlat)objArg;
+        if (collection.replace(id, flt)){
             answerMsg.addMsg("Успешно заменено");
         }
         else {

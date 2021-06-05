@@ -1,6 +1,7 @@
 package commands;
 
 import messages.AnswerMsg;
+import messages.User;
 
 /**
  * Interface for every command
@@ -23,7 +24,8 @@ public interface ICommand {
      * @param argument Argument for some commands
      * @param objArg
      * @param answerMsg
+     * @param user
      * @return End or not to end
      */
-    boolean execute(String argument, Object objArg, AnswerMsg answerMsg);
+    boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user);
 }

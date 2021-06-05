@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionManager;
 import messages.AnswerMsg;
 import messages.Status;
+import messages.User;
 
 /**
  * Print sorted command
@@ -17,7 +18,7 @@ public class PrintAscendingCom extends commands.AbstractCommand {
     }
 
     @Override
-    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
+    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user) {
         answerMsg.addMsg("Отсортированная коллекция:");
         answerMsg.addMsg(collection.printSort());
         answerMsg.setStatus(Status.OK);

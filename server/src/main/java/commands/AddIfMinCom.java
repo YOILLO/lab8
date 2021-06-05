@@ -2,8 +2,10 @@ package commands;
 
 import data.Flat;
 import collection.CollectionManager;
+import data.RowFlat;
 import messages.AnswerMsg;
 import messages.Status;
+import messages.User;
 
 /**
  * Add if element is less then min in collection
@@ -17,16 +19,16 @@ public class AddIfMinCom extends AbstractCommand{
         collection = col;
     }
 
-    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
-        Flat fl = (Flat) objArg;
+    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user) {
+        RowFlat fl = (RowFlat) objArg;
         Flat first = collection.getFirst();
         if (first == null) {
             answerMsg.addError("Коллекция пуста, ошибка");
             return true;
         }
-        if (first.getId() > fl.getId())
+        if (first.getPrice() > fl.getPrice())
         {
-            collection.addToCollection(fl);
+            collection.addToCollection(fl, user);
             answerMsg.addMsg("Добавлено");
         }
         else {

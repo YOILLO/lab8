@@ -1,6 +1,7 @@
 package server;
 
 import commands.CommandManager;
+import database_managers.DatabaseUserManager;
 import main.Main;
 import messages.AnswerMsg;
 import messages.CommandMsg;
@@ -16,12 +17,14 @@ public class Server {
     private int PORT;
     private SocketAddress socketAddress;
     private DatagramChannel datagramChannel;
-    private final int bufferSize = 1024;
+    public static int bufferSize = 1024;
     private CommandManager commandManager;
+    private DatabaseUserManager databaseUserManager;
 
-    public Server(int port, CommandManager com) {
+    public Server(int port, CommandManager com, DatabaseUserManager dbum) {
         PORT = port;
         commandManager = com;
+        databaseUserManager = dbum;
     }
 
     private boolean openSocket() {
@@ -65,38 +68,6 @@ public class Server {
         return null;
     }
 
-    private void sendMsg(AnswerMsg answerMsg) {
-        try {
-            Main.logger.info("Начинаю отправку ответа");
-            byte[] bf = serializer(answerMsg);
-            if (bf == null)
-                throw new IOException();
-            ByteBuffer buff = ByteBuffer.wrap(bf);
-            datagramChannel.send(buff, socketAddress);
-            Main.logger.info("Отправлено");
-        } catch (IOException e) {
-            Main.logger.error("Ошибка отправки сообщения");
-        }
-    }
-
-    private byte[] serializer(AnswerMsg answerMsg) {
-        try {
-            Main.logger.info("Начинаю сериализацию");
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(bufferSize);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
-            objectOutputStream.writeObject(answerMsg);
-            objectOutputStream.close();
-
-            byte[] ret = byteArrayOutputStream.toByteArray();
-            byteArrayOutputStream.close();
-            Main.logger.info("Сереализировал");
-            return ret;
-        } catch (IOException e) {
-            Main.logger.error("Ошибка перевода объекта в массив");
-        }
-        return null;
-    }
-
     private void close() {
         try {
             Main.logger.info("Закрывю канал");
@@ -117,17 +88,8 @@ public class Server {
         work = true;
         while (work) {
             CommandMsg msg = read();
-            AnswerMsg ans = new AnswerMsg();
-            ans.setStatus(Status.ERROR);
-            if (msg.getCommand().trim().equals("save")) {
-                ans.addError("Нет права на сохранения");
-            } else if (!commandManager.launchCommand(msg, ans)) {
-                ans.setStatus(Status.EXIT);
-                commandManager.launchCommand(new CommandMsg("save", "", null), new AnswerMsg());
-            }
-            sendMsg(ans);
+            RequestHandler requestHandler = new RequestHandler(msg, datagramChannel, databaseUserManager, commandManager, socketAddress);
         }
-        commandManager.launchCommand(new CommandMsg("save", "", null), new AnswerMsg());
         close();
     }
 

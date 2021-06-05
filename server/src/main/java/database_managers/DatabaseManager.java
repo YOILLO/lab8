@@ -25,7 +25,7 @@ public class DatabaseManager {
             price      FLOAT,
             furnish        CHAR(50),
             transport            CHAR(50),
-            group_admin_id        INT,
+            house_id        INT,
             user_id             INT
     );
       */

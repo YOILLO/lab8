@@ -2,73 +2,59 @@ package collection;
 
 import data.Flat;
 import data.House;
-import io.FileManager;
+import data.RowFlat;
+import database_managers.DatabaseCollectionManager;
+import messages.User;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Vector;
+import java.util.*;
 import java.util.regex.Pattern;
-import java.util.Collection;
 import java.util.stream.Collectors;
 
 /**
  * Manager of main collection
  */
 public class CollectionManager {
-    private java.util.Vector<Flat> myCollection = new java.util.Vector<>();
+    private java.util.Vector<Flat> temp = new java.util.Vector<>();
     private java.time.LocalDateTime lastInitTime;
     private java.time.LocalDateTime lastSaveTime;
-    private FileManager flManager;
+    private DatabaseCollectionManager databaseCollectionManager;
+    private Collection<Flat> myCollection;
 
-    public CollectionManager(FileManager fl) {
-        flManager = fl;
+    public CollectionManager(DatabaseCollectionManager dbclm) {
         lastSaveTime = null;
+        databaseCollectionManager = dbclm;
 
-        Load();
+        myCollection = Collections.synchronizedCollection(temp);
+
+        update();
     }
 
     /**
      * Load collection from file
      */
-    public void Load()
-    {
-        myCollection = flManager.readCollection();
-        lastInitTime = java.time.LocalDateTime.now();
-    }
-
-    /**
-     * Save collection in file
-     */
-    public void Save()
-    {
-        flManager.WriteCollection(myCollection);
+    public void update(){
+        myCollection = databaseCollectionManager.getCollection();
     }
 
     /**
      * Add to collection
      * @param fl Flat
      */
-    public void addToCollection(Flat fl)
+    public void addToCollection(RowFlat fl, User user)
     {
-        myCollection.add(fl);
+        databaseCollectionManager.insertFlat(fl, user);
+        update();
     }
 
     /**
      * Clear collection command
      */
-    public void clearCollection()
+    public void clearCollection(User user)
     {
-        myCollection.clear();
+        databaseCollectionManager.clearCollection(user);
+        update();
     }
 
-    /**
-     * Generate ID for new element
-     * @return ID
-     */
-    public int generateNextId() {
-        if (myCollection.isEmpty()) return 1;
-        return myCollection.lastElement().getId() + 1;
-    }
 
     /**
      * Get collection size
@@ -85,7 +71,7 @@ public class CollectionManager {
      */
     public Flat getFirst(){
         if (myCollection.isEmpty()) return null;
-        return myCollection.firstElement();
+        return myCollection.stream().findFirst().get();
     }
 
     /**
@@ -94,7 +80,12 @@ public class CollectionManager {
      */
     public boolean removeLast(){
         if (myCollection.isEmpty()) return false;
-        myCollection.remove(myCollection.lastElement());
+        int lastId = 0;
+        for (Flat fl : myCollection){
+            lastId = fl.getId();
+        }
+        databaseCollectionManager.deleteFlatById(lastId);
+        update();
         return true;
     }
 
@@ -120,17 +111,18 @@ public class CollectionManager {
      */
     public boolean deleteByHouse(House hs)
     {
-        /*for (Flat fl : myCollection)
+        for (Flat fl : myCollection)
         {
             if(fl.getHouse().equals(hs))
             {
-                myCollection.remove(fl);
+                databaseCollectionManager.deleteFlatById(fl.getId());
+                update();
                 return true;
             }
         }
-        return false;*/
-        myCollection.removeIf(flat -> flat.getHouse().equals(hs));
-        return true;
+        return false;
+        //myCollection.removeIf(flat -> flat.getHouse().equals(hs));
+        //return true;
     }
 
     /**
@@ -148,7 +140,9 @@ public class CollectionManager {
             }
         }
         return false;*/
-        myCollection.removeIf(flat -> flat.getId() == id);
+        databaseCollectionManager.deleteFlatById(id);
+        update();
+        //myCollection.removeIf(flat -> flat.getId() == id);
         return true;
     }
 
@@ -158,27 +152,26 @@ public class CollectionManager {
      */
     public int deleteGreater(Flat flt)
     {
-        Vector<Flat> buffer = new Vector<Flat>();
         for (Flat fl : myCollection)
         {
-            if(fl.getId() > flt.getId())
+            if(fl.getPrice() > flt.getPrice())
             {
-                buffer.add(fl);
+                databaseCollectionManager.deleteFlatById(fl.getId());
             }
         }
-        myCollection.removeAll(buffer);
-        return buffer.size();
+        update();
+        return myCollection.size();
     }
 
     /**
      * Replace element
      * @param ft Element
      */
-    public boolean replace(Flat ft)
+    public boolean replace(int id, RowFlat ft)
     {
-        myCollection = myCollection.stream()
+        /*myCollection = myCollection.stream()
                 .map(flat -> flat.getId() == ft.getId() ? ft : flat)
-                .collect(Collectors.toCollection(Vector::new));
+                .collect(Collectors.toCollection(Vector::new));*/
         /*for (Flat fl : myCollection)
         {
             if (fl.getId() == ft.getId())
@@ -187,6 +180,7 @@ public class CollectionManager {
                 return true;
             }
         }*/
+        databaseCollectionManager.updateFloatById(id, ft);
         return true;
     }
 

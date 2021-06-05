@@ -4,6 +4,7 @@ import collection.CollectionManager;
 import data.House;
 import messages.AnswerMsg;
 import messages.Status;
+import messages.User;
 
 /**
  * Remove one element by house
@@ -18,7 +19,7 @@ public class RemoveAnyByHouseCom extends AbstractCommand{
     }
 
     @Override
-    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
+    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user) {
         if (collection.deleteByHouse((House) objArg)){
             answerMsg.addMsg("Успешно удалено");
         }else {

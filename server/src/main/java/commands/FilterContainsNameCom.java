@@ -4,6 +4,7 @@ import collection.CollectionManager;
 import exceptions.WrongFormat;
 import messages.AnswerMsg;
 import messages.Status;
+import messages.User;
 
 import java.util.regex.PatternSyntaxException;
 
@@ -19,7 +20,7 @@ public class FilterContainsNameCom extends AbstractCommand {
         collection = col;
     }
 
-    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg) {
+    public boolean execute(String argument, Object objArg, AnswerMsg answerMsg, User user) {
         try{
             if (argument.isEmpty()) throw new WrongFormat();
             answerMsg.addMsg("ищу по шаблону " + argument.trim());

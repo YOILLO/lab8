@@ -3,6 +3,8 @@ package io;
 import data.*;
 import exceptions.WrongFormat;
 import exceptions.EmptyIO;
+import messages.User;
+
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -261,7 +263,7 @@ public class Console {
      * Get flat from user but with consume ID
      * @return Flat
      */
-    public Flat askFlatWithID()
+    public Flat askFlatWithID(User user)
     {
         int Id = 0;
         while (true) {
@@ -515,7 +517,7 @@ public class Console {
 
 
         return new Flat(Id, name, new Coordinates(x,y), java.time.LocalDate.now(), erea,
-                numberOfRooms, price, furnish, transport, new House(houseName, year, numberOfFlors));
+                numberOfRooms, price, furnish, transport, new House(houseName, year, numberOfFlors), user);
     }
 
     /**
@@ -589,6 +591,24 @@ public class Console {
         return new House(houseName, year, numberOfFlors);
     }
 
+    public boolean askYesOrNo(){
+        String st = "";
+        while (!st.equals("yes") && !st.equals("no")) {
+            println("yes/no");
+            st = userScaner.nextLine();
+        }
+        return st.equals("yes");
+
+    }
+
+    public String getString(){
+        String st = "";
+        while (st.equals("")){
+            st = userScaner.nextLine().trim();
+        }
+        return st;
+    }
+
     /**
      * Static print error command
      * @param msg Error msg
@@ -605,5 +625,4 @@ public class Console {
     public static void println(String msg){
         System.out.println(msg);
     }
-
 }

@@ -4,6 +4,7 @@ import data.*;
 import exceptions.EmptyIO;
 import exceptions.WrongFormat;
 import main.Main;
+import messages.User;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -132,7 +133,7 @@ public class ScriptManager {
         return null;
     }
 
-    public Flat readFlat(){
+    public Flat readFlat(User user){
         try {
             int Id = 0;
 
@@ -226,7 +227,7 @@ public class ScriptManager {
 
             return new Flat(Id, name, new Coordinates(x, y), LocalDate.now(), erea,
                     numberOfRooms, price, furnish, transport,
-                    new House(houseName, year, numberOfFlors));
+                    new House(houseName, year, numberOfFlors), user);
         } catch (WrongFormat wrongFormat) {
             Main.logger.error("Ошибка парсинга");
         } catch (IOException e) {

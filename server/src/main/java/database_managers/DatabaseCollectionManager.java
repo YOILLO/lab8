@@ -357,7 +357,7 @@ public class DatabaseCollectionManager {
         try {
             long id = resultSet.getLong(DatabaseManager.FLAT_TABLE_ID_COLUMN);
             String name = resultSet.getString(DatabaseManager.FLAT_TABLE_NAME_COLUMN);
-            LocalDate creationDate = LocalDate.from(resultSet.getTimestamp(DatabaseManager.FLAT_TABLE_CREATION_DATE_COLUMN).toLocalDateTime().atZone(ZoneId.systemDefault()).toInstant());
+            LocalDate creationDate = LocalDate.from(resultSet.getTimestamp(DatabaseManager.FLAT_TABLE_CREATION_DATE_COLUMN).toLocalDateTime().toLocalDate());
             int area = resultSet.getInt(DatabaseManager.FLAT_TABLE_AREA_COLUMN);
             int numberOfRooms = resultSet.getInt(DatabaseManager.FLAT_TABLE_NUMBERS_OF_ROOMS_COLUMN);
             float price = resultSet.getFloat(DatabaseManager.FLAT_TABLE_PRICE_COLUMN);

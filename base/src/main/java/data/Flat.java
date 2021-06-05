@@ -149,7 +149,8 @@ public class Flat implements Serializable {
                 "price=" + price + ",\n" +
                 "furnish=" + furnish + ",\n" +
                 "transport=" + transport + ",\n" +
-                "house: " + house +
+                "house: " + house + ",\n" +
+                "owner: " + user.getUsername() +
                 '}';
     }
 
