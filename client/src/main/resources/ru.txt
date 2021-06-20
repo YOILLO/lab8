@@ -1,0 +1,11 @@
+are_registered=Are you registered?
+login=Login:
+login_button=Login
+password=Password:
+connection_error=Connection error
+register_error=Register error
+login_error=Login error
+loading=Loading...
+table_mode=Table mode
+visual_mode=Visual mode
+command_mode=Command mode

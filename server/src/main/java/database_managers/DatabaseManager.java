@@ -1,9 +1,7 @@
 package database_managers;
 
-import data.Furnish;
-import data.House;
-import data.Transport;
 import main.Main;
+import server.Tunnel;
 
 import java.sql.*;
 
@@ -93,6 +91,9 @@ public class DatabaseManager {
     private void connectToDataBase() {
         try {
             Class.forName(JDBC_DRIVER);
+            Tunnel tunnel = new Tunnel("se.ifmo.ru", user, password,
+                    2222, "pg", 8594, 5432);
+            tunnel.connect();
             base = DriverManager.getConnection(url, user, password);
             Main.logger.info("Соединение с базой данных установлено.");
         } catch (SQLException exception) {

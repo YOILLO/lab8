@@ -57,3 +57,61 @@
 12:47:23.108 [main] INFO  My logger - Сереализировал 
 12:47:23.109 [main] INFO  My logger - Отправлено 
 12:47:23.110 [main] INFO  My logger - Ожидаю входящее сообщение 
+19:27:18.041 [main] ERROR My logger - Произошла ошибка при подключении к базе данных! 
+19:27:18.057 [main] ERROR My logger - Соединение с базой данных не установлено! 
+19:28:00.419 [main] ERROR My logger - Произошла ошибка при подключении к базе данных! 
+19:28:00.433 [main] ERROR My logger - Соединение с базой данных не установлено! 
+19:28:32.928 [main] ERROR My logger - Произошла ошибка при подключении к базе данных! 
+19:28:32.936 [main] ERROR My logger - Соединение с базой данных не установлено! 
+18:33:16.767 [main] ERROR My logger - Некорректный ssh-хост. 
+18:33:16.830 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:33:16.861 [main] ERROR My logger - Ошибка подключения через ssh-туннель. 
+18:34:15.009 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:34:16.134 [main] INFO  My logger - Подключение установлено. 
+18:34:16.149 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:34:18.493 [main] ERROR My logger - Произошла ошибка при подключении к базе данных! 
+18:34:18.493 [main] ERROR My logger - Соединение с базой данных не установлено! 
+18:35:59.441 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:35:59.941 [main] INFO  My logger - Подключение установлено. 
+18:35:59.956 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:36:02.284 [main] ERROR My logger - Произошла ошибка при подключении к базе данных! 
+18:36:02.300 [main] ERROR My logger - Соединение с базой данных не установлено! 
+18:37:57.780 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:37:58.696 [main] INFO  My logger - Подключение установлено. 
+18:37:58.704 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:37:58.878 [main] INFO  My logger - Соединение с базой данных установлено. 
+18:37:58.898 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+18:37:58.946 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:37:58.948 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:37:58.948 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:37:58.956 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:37:58.958 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:37:58.958 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+18:37:58.958 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:37:58.966 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:37:58.966 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:37:58.966 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:37:58.968 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:37:58.968 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+18:37:58.968 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:37:58.976 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:37:58.976 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:37:58.976 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:37:58.976 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:37:58.976 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:37:58.986 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:37:58.988 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:37:58.988 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+18:37:58.988 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:37:58.988 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:37:58.988 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:37:58.997 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:37:58.997 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:37:58.997 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+18:37:58.997 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:37:58.997 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:37:58.997 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:37:58.997 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+18:37:59.019 [main] INFO  My logger - Открываю сокет 
+18:37:59.039 [main] INFO  My logger - Сокет открыт 
+18:37:59.039 [main] INFO  My logger - Ожидаю входящее сообщение 

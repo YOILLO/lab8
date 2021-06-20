@@ -1,0 +1,4 @@
+are_registered=Are you registered?
+login=Login:
+login_button=Login
+password=Password:

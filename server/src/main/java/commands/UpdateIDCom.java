@@ -1,6 +1,5 @@
 package commands;
 
-import com.sun.rowset.internal.Row;
 import data.Flat;
 import collection.CollectionManager;
 import data.RowFlat;

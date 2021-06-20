@@ -5,8 +5,6 @@ import commands.*;
 import database_managers.DatabaseCollectionManager;
 import database_managers.DatabaseManager;
 import database_managers.DatabaseUserManager;
-import messages.AnswerMsg;
-import messages.CommandMsg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import server.Server;
@@ -30,7 +28,7 @@ public class Main {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        DatabaseManager databaseManager = new DatabaseManager("jdbc:postgresql://pg:5432/studs", "s311772", "axu862");
+        DatabaseManager databaseManager = new DatabaseManager("jdbc:postgresql://localhost:8594/studs", "s311772", "axu862");
         DatabaseUserManager databaseUserManager = new DatabaseUserManager(databaseManager);
         DatabaseCollectionManager databaseCollectionManager = new DatabaseCollectionManager(databaseManager, databaseUserManager);
         CollectionManager collection = new CollectionManager(databaseCollectionManager);

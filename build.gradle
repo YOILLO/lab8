@@ -15,10 +15,12 @@ project(':server') {
     mainClassName = 'server.Main'
     dependencies {
         implementation project(':base')
+        implementation group: 'com.jcraft', name: 'jsch', version: '0.1.44-1'
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.7'
         compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.2'
         compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.2'
         compile group: 'org.postgresql', name: 'postgresql', version: '9.3-1100-jdbc4'
+
     }
     jar {
         manifest {

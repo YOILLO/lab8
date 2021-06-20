@@ -1,0 +1,4 @@
+are_registered=La you registered?
+login=La login:
+login_button=La login
+password=La password:

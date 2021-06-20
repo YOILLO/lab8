@@ -1,6 +1,7 @@
 package main;
 
 import client.Client;
+import graphics.LoginWindow;
 import io.Console;
 
 import java.io.PrintStream;
@@ -24,6 +25,8 @@ public class Main {
         Console console = new Console(scanner);
         Client client = new Client("localhost", 1812, console, scanner, 30000);
 
-        client.run();
+        LoginWindow loginWindow = new LoginWindow(client);
+
+        //client.run();
     }
 }
