@@ -1,14 +1,17 @@
 io/Console.java
  io.Console
-client/Client.java
- client.Client
-main/Main.java
- main.Main
 graphics/AbstractWindow.java
  graphics.AbstractWindow
  graphics.AbstractWindow$SetEsPrListener
  graphics.AbstractWindow$SetItListener
  graphics.AbstractWindow$SetRoListener
  graphics.AbstractWindow$SetRuListener
+main/Main.java
+ main.Main
+client/Client.java
+ client.Client
 graphics/LoginWindow.java
  graphics.LoginWindow
+ graphics.LoginWindow$1
+graphics/MainWindow.java
+ graphics.MainWindow

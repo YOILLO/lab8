@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -92,5 +93,14 @@ public abstract class AbstractWindow extends JFrame {
             }
             setLocal();
         }
+    }
+
+    protected void close(){
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        super.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+    }
+
+    private Rectangle getRectangle(){
+        return this.getBounds();
     }
 }

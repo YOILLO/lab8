@@ -27,6 +27,7 @@ public class Client {
     private int TIMEOUT;
     private Console console;
     private Scanner scanner;
+    private User user;
 
     public Client (String adrres , int port, Console con, Scanner sc, int timeout){
         PORT = port;
@@ -36,7 +37,7 @@ public class Client {
         TIMEOUT = timeout;
     }
 
-    private boolean openSocket(){
+    public boolean openSocket(){
         try {
             println("Открываю сокет");
             socketAddress = new InetSocketAddress(ADDR ,PORT);
@@ -115,6 +116,29 @@ public class Client {
         println("Канал закрыт");
     }
 
+    public boolean login(String login, String password, boolean isRegistered){
+        user = new User(login, password);
+        user.hash();
+        if (isRegistered){
+            sendMsg(new CommandMsg("enter", "", null, user));
+            AnswerMsg answerMsg = read();
+            if (answerMsg.getStatus().equals(Status.OK)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        else {
+            sendMsg(new CommandMsg("register", "", null, user));
+            AnswerMsg answerMsg = read();
+            if (answerMsg.getStatus().equals(Status.OK)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
     public void run() {
         while (!openSocket()) {
             printError("Неполучилось открыть сокет, переподключаюсь");
@@ -190,5 +214,9 @@ public class Client {
                 work = false;
             }
         }
+    }
+
+    public User getUser() {
+        return user;
     }
 }

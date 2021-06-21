@@ -1,4 +1,11 @@
-are_registered=La you registered?
-login=La login:
-login_button=La login
-password=La password:
+are_registered=Are you registered?
+login=Login:
+login_button=Login
+password=Password:
+connection_error=Connection error
+register_error=Register error
+login_error=Login error
+loading=Loading...
+table_mode=La Table mode
+visual_mode=La Visual mode
+command_mode=La Command mode

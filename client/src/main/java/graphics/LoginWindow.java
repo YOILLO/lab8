@@ -6,8 +6,12 @@ import main.Main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Properties;
+
+import static io.Console.printError;
 
 public class LoginWindow extends AbstractWindow{
 
@@ -39,6 +43,10 @@ public class LoginWindow extends AbstractWindow{
 
         client = cli;
 
+        while (!client.openSocket()) {
+            printError("Неполучилось открыть сокет, переподключаюсь");
+        }
+
         locals = new Properties();
         try {
             Console.println("Читаю фаил локали");
@@ -50,6 +58,20 @@ public class LoginWindow extends AbstractWindow{
 
         setLocal();
 
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean result = client.login(loginTextField.getText(), new String(passwordField.getPassword()), isRegistered.isSelected());
+                if(result){
+                    MainWindow mn = new MainWindow(client, getBounds());
+                    close();
+                }else{
+                    info.setForeground(Color.red);
+                    info.setText(locals.getProperty("login_error", "local error"));
+                }
+            }
+        });
+
         Container container = this.getContentPane();
 
         container.setLayout(new GridLayout(3, 3));
@@ -58,6 +80,10 @@ public class LoginWindow extends AbstractWindow{
         container.add(getLangBox());
         container.add(Box.createGlue());
         Box box = Box.createVerticalBox();
+        loginTextField.setMinimumSize(new Dimension(10, 45));
+        loginTextField.setMaximumSize(new Dimension(10000, 45));
+        passwordField.setMinimumSize(new Dimension(10, 45));
+        passwordField.setMaximumSize(new Dimension(10000, 45));
         box.add(loginLabel);
         box.add(loginTextField);
         box.add(passwordLabel);
@@ -65,6 +91,7 @@ public class LoginWindow extends AbstractWindow{
         box.add(isRegistered);
         box.add(loginButton);
         box.add(info);
+        box.add(Box.createGlue());
         container.add(box);
         container.add(Box.createGlue());
         container.add(Box.createGlue());
