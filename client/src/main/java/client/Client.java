@@ -139,48 +139,13 @@ public class Client {
         }
     }
 
+    public AnswerMsg sendAndAnswer(CommandMsg commandMsg){
+        sendMsg(commandMsg);
+        AnswerMsg answerMsg = read();
+        return answerMsg;
+    }
+
     public void run() {
-        while (!openSocket()) {
-            printError("Неполучилось открыть сокет, переподключаюсь");
-        }
-        boolean isNotReady = true;
-        User user = null;
-        while (isNotReady){
-            println("Are you registered?");
-            boolean yesOrNo = console.askYesOrNo();
-            if (yesOrNo){
-                println("Enter username:");
-                String name = console.getString();
-                println("Enter password:");
-                String pass = console.getString();
-                user = new User(name, pass);
-                user.hash();
-                sendMsg(new CommandMsg("enter", "", null, user));
-                AnswerMsg answerMsg = read();
-                if (answerMsg.getStatus().equals(Status.OK)){
-                    println("Успешно вошел");
-                    isNotReady = false;
-                } else {
-                    println("Неверный логин или пароль");
-                }
-            }
-            else {
-                println("Enter username:");
-                String name = console.getString();
-                println("Enter password:");
-                String pass = console.getString();
-                user = new User(name, pass);
-                user.hash();
-                sendMsg(new CommandMsg("register", "", null, user));
-                AnswerMsg answerMsg = read();
-                if (answerMsg.getStatus().equals(Status.OK)){
-                    println("Успешно зарегестрирован");
-                    isNotReady = false;
-                } else {
-                    println("Ошибка регистрации");
-                }
-            }
-        }
         boolean work = true;
         while (work) {
             String[] userCommand = {"", ""};

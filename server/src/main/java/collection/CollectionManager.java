@@ -214,14 +214,14 @@ public class CollectionManager {
             out += "\n\n";
         }*/
         if (myCollection.isEmpty())
-            return "Коллекция пуста";
+            return "Collection is empty";
 
         return myCollection.stream().reduce("", (sum, m) -> sum += m + "\n\n", (sum1, sum2) -> sum1 + sum2).trim();
     }
 
     @Override
     public String toString() {
-        return "Тип коллекции = Vector<Flat>\n" + "Время = " + lastInitTime+ "\n" +
-                "Количество элементов = " + myCollection.size();
+        return "Collection type = Vector<Flat>\n" + "Time = " + lastInitTime+ "\n" +
+                "Size = " + myCollection.size();
     }
 }

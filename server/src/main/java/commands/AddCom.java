@@ -15,7 +15,7 @@ public class AddCom extends AbstractCommand{
 
     public AddCom(CollectionManager col)
     {
-        super("add", " {element}: Добавить новый элемент в коллекцию");
+        super("add", " {element}: \u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043D\u043E\u0432\u044B\u0439 \u044D\u043B\u0435\u043C\u0435\u043D\u0442 \u0432 \u043A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044E");
         collection = col;
     }
 

@@ -13,7 +13,7 @@ public class SaveCom extends commands.AbstractCommand {
 
     public SaveCom(CollectionManager coll)
     {
-        super("save", " : сохранить коллекцию в файл");
+        super("save", " : \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u043A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044E \u0432 \u0444\u0430\u0439\u043B");
         collection = coll;
     }
 

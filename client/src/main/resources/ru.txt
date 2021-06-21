@@ -9,3 +9,5 @@ loading=Loading...
 table_mode=Table mode
 visual_mode=Visual mode
 command_mode=Command mode
+return_button=Return
+send_command=Send

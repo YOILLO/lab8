@@ -40,14 +40,14 @@ public class CommandManager {
     public synchronized boolean launchCommand(CommandMsg commandMsg, AnswerMsg answerMsg)
     {
         if (!databaseUserManager.checkUserByUsernameAndPassword(commandMsg.getUser())){
-            Main.logger.error("Ошбика");
+            Main.logger.error("\u041E\u0448\u0431\u0438\u043A\u0430");
             answerMsg.setStatus(Status.ERROR);
             return false;
         }
-        Main.logger.info("Вызывается команда " + commandMsg.getCommand());
+        Main.logger.info("\u0412\u044B\u0437\u044B\u0432\u0430\u0435\u0442\u0441\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u0430 " + commandMsg.getCommand());
         if (commandMsg.getCommand().trim().equals("help")) {
-            answerMsg.addMsg("help : вывести справку по доступным командам");
-            answerMsg.addMsg("execute_script file_name : считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.");
+            answerMsg.addMsg("help : \u0432\u044B\u0432\u0435\u0441\u0442\u0438 \u0441\u043F\u0440\u0430\u0432\u043A\u0443 \u043F\u043E \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C \u043A\u043E\u043C\u0430\u043D\u0434\u0430\u043C");
+            answerMsg.addMsg("execute_script file_name : \u0441\u0447\u0438\u0442\u0430\u0442\u044C \u0438 \u0438\u0441\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0441\u043A\u0440\u0438\u043F\u0442 \u0438\u0437 \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u043E\u0433\u043E \u0444\u0430\u0439\u043B\u0430. \u0412 \u0441\u043A\u0440\u0438\u043F\u0442\u0435 \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0442\u0441\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u0432 \u0442\u0430\u043A\u043E\u043C \u0436\u0435 \u0432\u0438\u0434\u0435, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0445 \u0432\u0432\u043E\u0434\u0438\u0442 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C \u0432 \u0438\u043D\u0442\u0435\u0440\u0430\u043A\u0442\u0438\u0432\u043D\u043E\u043C \u0440\u0435\u0436\u0438\u043C\u0435.");
             for (commands.AbstractCommand comm : commands) {
                 answerMsg.addMsg(comm.getName() + comm.getDescription());
             }
@@ -58,7 +58,7 @@ public class CommandManager {
                 files.clear();
             }
             else{
-                answerMsg.addError("Необходим file_name");
+                answerMsg.addError("\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C file_name");
             }
         }
         else {
@@ -67,7 +67,7 @@ public class CommandManager {
                     return comm.execute(commandMsg.getArg(), commandMsg.getObjArg(), answerMsg, commandMsg.getUser());
                 }
             }
-            answerMsg.addError("Такой команды нет, проверь help");
+            answerMsg.addError("\u0422\u0430\u043A\u043E\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u043D\u0435\u0442, \u043F\u0440\u043E\u0432\u0435\u0440\u044C help");
         }
         return true;
     }
@@ -78,10 +78,10 @@ public class CommandManager {
      */
     private boolean launchScriptCommand(AnswerMsg answerMsg, CommandMsg commandMsg)
     {
-        Main.logger.info("Вызывается команда " + commandMsg.getCommand());
+        Main.logger.info("\u0412\u044B\u0437\u044B\u0432\u0430\u0435\u0442\u0441\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u0430 " + commandMsg.getCommand());
         if (commandMsg.getCommand().trim().equals("help")) {
-            answerMsg.addMsg("help : вывести справку по доступным командам");
-            answerMsg.addMsg("execute_script file_name : считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.");
+            answerMsg.addMsg("help : \u0432\u044B\u0432\u0435\u0441\u0442\u0438 \u0441\u043F\u0440\u0430\u0432\u043A\u0443 \u043F\u043E \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C \u043A\u043E\u043C\u0430\u043D\u0434\u0430\u043C");
+            answerMsg.addMsg("execute_script file_name : \u0441\u0447\u0438\u0442\u0430\u0442\u044C \u0438 \u0438\u0441\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0441\u043A\u0440\u0438\u043F\u0442 \u0438\u0437 \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u043E\u0433\u043E \u0444\u0430\u0439\u043B\u0430. \u0412 \u0441\u043A\u0440\u0438\u043F\u0442\u0435 \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0442\u0441\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u0432 \u0442\u0430\u043A\u043E\u043C \u0436\u0435 \u0432\u0438\u0434\u0435, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0445 \u0432\u0432\u043E\u0434\u0438\u0442 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C \u0432 \u0438\u043D\u0442\u0435\u0440\u0430\u043A\u0442\u0438\u0432\u043D\u043E\u043C \u0440\u0435\u0436\u0438\u043C\u0435.");
             for (commands.AbstractCommand comm : commands) {
                 answerMsg.addMsg(comm.getName() + comm.getDescription());
             }
@@ -89,12 +89,12 @@ public class CommandManager {
         else if (commandMsg.getCommand().trim().equals("execute_script")){
             if (!commandMsg.getArg().equals("")) {
                 if (files.contains(commandMsg.getArg().trim()))
-                    answerMsg.addError("попытка рекурсивно вызвать скрипт");
+                    answerMsg.addError("\u043F\u043E\u043F\u044B\u0442\u043A\u0430 \u0440\u0435\u043A\u0443\u0440\u0441\u0438\u0432\u043D\u043E \u0432\u044B\u0437\u0432\u0430\u0442\u044C \u0441\u043A\u0440\u0438\u043F\u0442");
                 else
                     ScripMode(commandMsg.getArg().trim(), answerMsg, commandMsg.getUser());
             }
             else{
-                answerMsg.addError("Необходим file_name");
+                answerMsg.addError("\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C file_name");
             }
         }
         else {
@@ -103,7 +103,7 @@ public class CommandManager {
                     return comm.execute(commandMsg.getArg(), commandMsg.getObjArg(), answerMsg, commandMsg.getUser());
                 }
             }
-            answerMsg.addError("Такой команды нет, проверь help");
+            answerMsg.addError("\u0422\u0430\u043A\u043E\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u043D\u0435\u0442, \u043F\u0440\u043E\u0432\u0435\u0440\u044C help");
         }
         return true;
     }
@@ -115,7 +115,7 @@ public class CommandManager {
     private void ScripMode(String fileName, AnswerMsg answerMsg, User user){
         ScriptManager scr = new ScriptManager(fileName.trim());
         if (scr == null){
-            answerMsg.addError("Не открывается скрипт");
+            answerMsg.addError("\u041D\u0435 \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442\u0441\u044F \u0441\u043A\u0440\u0438\u043F\u0442");
         }
         else{
             files.push(fileName.trim());
@@ -139,7 +139,7 @@ public class CommandManager {
                 CommandMsg commandMsg = new CommandMsg(userCommand[0], userCommand[1], obj, user);
                 isWork = launchScriptCommand(answerMsg, commandMsg);
             }
-            answerMsg.addMsg(files.pop() + " выполнен");
+            answerMsg.addMsg(files.pop() + " \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D");
         }
     }
 }

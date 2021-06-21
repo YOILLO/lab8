@@ -4,6 +4,8 @@ import client.Client;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainWindow extends AbstractWindow{
 
@@ -25,6 +27,14 @@ public class MainWindow extends AbstractWindow{
         this.setMinimumSize(new Dimension(500, 500));
 
         setLocal();
+
+        commandMode.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CommandMode commandMode = new CommandMode(client, getMe(), getBounds());
+                setVisible(false);
+            }
+        });
 
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(3, 3));
@@ -65,5 +75,9 @@ public class MainWindow extends AbstractWindow{
         tableMode.setText(locals.getProperty("table_mode", "Local error"));
         visualMode.setText(locals.getProperty("visual_mode", "Local error"));
         commandMode.setText(locals.getProperty("command_mode", "Local error"));
+    }
+
+    private MainWindow getMe(){
+        return this;
     }
 }
