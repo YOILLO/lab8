@@ -6,17 +6,20 @@ graphics/AbstractWindow.java
  graphics.AbstractWindow$SetItListener
  graphics.AbstractWindow$SetRoListener
  graphics.AbstractWindow$SetRuListener
-graphics/CommandMode.java
- graphics.CommandMode
- graphics.CommandMode$1
- graphics.CommandMode$2
+client/Client.java
+ client.Client
 main/Main.java
  main.Main
 graphics/LoginWindow.java
  graphics.LoginWindow
  graphics.LoginWindow$1
-client/Client.java
- client.Client
+graphics/FlatAsker.java
+ graphics.FlatAsker
+ graphics.FlatAsker$1
+graphics/CommandMode.java
+ graphics.CommandMode
+ graphics.CommandMode$1
+ graphics.CommandMode$2
 graphics/MainWindow.java
  graphics.MainWindow
  graphics.MainWindow$1

@@ -57,7 +57,7 @@ public class CommandMode extends AbstractWindow{
                     }
                     CommandMsg commandMsg = new CommandMsg(userCommand[0], userCommand[1], obj, client.getUser());
                     AnswerMsg answer = client.sendAndAnswer(commandMsg);
-                    answerEarea.setText(answerEarea.getText() + answer.getAnswer());
+                    answerEarea.setText(answerEarea.getText() + answer.getAnswer() + "\n");
                 }
             }
         });

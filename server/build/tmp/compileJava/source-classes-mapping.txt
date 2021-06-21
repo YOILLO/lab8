@@ -1,3 +1,22 @@
+io/ScriptManager.java
+ io.ScriptManager
+commands/ICommand.java
+ commands.ICommand
+database_managers/DatabaseUserManager.java
+ database_managers.DatabaseUserManager
+database_managers/DatabaseCollectionManager.java
+ database_managers.DatabaseCollectionManager
+server/Tunnel.java
+ server.Tunnel
+ server.Tunnel$localUserInfo
+server/AnswerHandler.java
+ server.AnswerHandler
+commands/AbstractCommand.java
+ commands.AbstractCommand
+database_managers/DatabaseManager.java
+ database_managers.DatabaseManager
+collection/CollectionManager.java
+ collection.CollectionManager
 commands/AddCom.java
  commands.AddCom
 commands/FilterContainsNameCom.java
@@ -8,48 +27,29 @@ commands/ShowCom.java
  commands.ShowCom
 commands/UpdateIDCom.java
  commands.UpdateIDCom
-commands/ClearCom.java
- commands.ClearCom
+server/RequestHandler.java
+ server.RequestHandler
 commands/RemoveLastCom.java
  commands.RemoveLastCom
 commands/AddIfMinCom.java
  commands.AddIfMinCom
-collection/CollectionManager.java
- collection.CollectionManager
+commands/CommandManager.java
+ commands.CommandManager
+commands/ExitCom.java
+ commands.ExitCom
+commands/RemoveById.java
+ commands.RemoveById
+commands/ClearCom.java
+ commands.ClearCom
 commands/SaveCom.java
  commands.SaveCom
-commands/AbstractCommand.java
- commands.AbstractCommand
-commands/ICommand.java
- commands.ICommand
+server/Server.java
+ server.Server
 commands/RemoveAnyByHouseCom.java
  commands.RemoveAnyByHouseCom
+main/Main.java
+ main.Main
 commands/RemoveGreaterCom.java
  commands.RemoveGreaterCom
 commands/PrintAscendingCom.java
  commands.PrintAscendingCom
-commands/RemoveById.java
- commands.RemoveById
-commands/ExitCom.java
- commands.ExitCom
-server/RequestHandler.java
- server.RequestHandler
-server/AnswerHandler.java
- server.AnswerHandler
-database_managers/DatabaseUserManager.java
- database_managers.DatabaseUserManager
-database_managers/DatabaseManager.java
- database_managers.DatabaseManager
-server/Server.java
- server.Server
-server/Tunnel.java
- server.Tunnel
- server.Tunnel$localUserInfo
-database_managers/DatabaseCollectionManager.java
- database_managers.DatabaseCollectionManager
-main/Main.java
- main.Main
-commands/CommandManager.java
- commands.CommandManager
-io/ScriptManager.java
- io.ScriptManager
