@@ -1,22 +1,3 @@
-io/ScriptManager.java
- io.ScriptManager
-commands/ICommand.java
- commands.ICommand
-database_managers/DatabaseUserManager.java
- database_managers.DatabaseUserManager
-database_managers/DatabaseCollectionManager.java
- database_managers.DatabaseCollectionManager
-server/Tunnel.java
- server.Tunnel
- server.Tunnel$localUserInfo
-server/AnswerHandler.java
- server.AnswerHandler
-commands/AbstractCommand.java
- commands.AbstractCommand
-database_managers/DatabaseManager.java
- database_managers.DatabaseManager
-collection/CollectionManager.java
- collection.CollectionManager
 commands/AddCom.java
  commands.AddCom
 commands/FilterContainsNameCom.java
@@ -27,29 +8,48 @@ commands/ShowCom.java
  commands.ShowCom
 commands/UpdateIDCom.java
  commands.UpdateIDCom
-server/RequestHandler.java
- server.RequestHandler
+server/Tunnel.java
+ server.Tunnel
+ server.Tunnel$localUserInfo
 commands/RemoveLastCom.java
  commands.RemoveLastCom
-commands/AddIfMinCom.java
- commands.AddIfMinCom
 commands/CommandManager.java
  commands.CommandManager
+collection/CollectionManager.java
+ collection.CollectionManager
+commands/SaveCom.java
+ commands.SaveCom
+database_managers/DatabaseCollectionManager.java
+ database_managers.DatabaseCollectionManager
+commands/ICommand.java
+ commands.ICommand
+commands/RemoveAnyByHouseCom.java
+ commands.RemoveAnyByHouseCom
+commands/RemoveGreaterCom.java
+ commands.RemoveGreaterCom
+commands/PrintAscendingCom.java
+ commands.PrintAscendingCom
+io/ScriptManager.java
+ io.ScriptManager
+database_managers/DatabaseUserManager.java
+ database_managers.DatabaseUserManager
+commands/AbstractCommand.java
+ commands.AbstractCommand
+database_managers/DatabaseManager.java
+ database_managers.DatabaseManager
+commands/AddIfMinCom.java
+ commands.AddIfMinCom
 commands/ExitCom.java
  commands.ExitCom
 commands/RemoveById.java
  commands.RemoveById
 commands/ClearCom.java
  commands.ClearCom
-commands/SaveCom.java
- commands.SaveCom
+server/RequestHandler.java
+ server.RequestHandler
+server/AnswerHandler.java
+ server.AnswerHandler
 server/Server.java
  server.Server
-commands/RemoveAnyByHouseCom.java
- commands.RemoveAnyByHouseCom
 main/Main.java
  main.Main
-commands/RemoveGreaterCom.java
- commands.RemoveGreaterCom
-commands/PrintAscendingCom.java
- commands.PrintAscendingCom

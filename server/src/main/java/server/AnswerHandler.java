@@ -47,6 +47,9 @@ public class AnswerHandler extends Thread{
             objectOutputStream.writeObject(answerMsg);
             objectOutputStream.close();
 
+            if (answerMsg.getObj() != null)
+                Main.logger.info("Отправляю объект");
+
             byte[] ret = byteArrayOutputStream.toByteArray();
             byteArrayOutputStream.close();
             Main.logger.info("Сереализировал");

@@ -14,17 +14,14 @@ import java.util.stream.Collectors;
  * Manager of main collection
  */
 public class CollectionManager {
-    private java.util.Vector<Flat> temp = new java.util.Vector<>();
     private java.time.LocalDateTime lastInitTime;
     private java.time.LocalDateTime lastSaveTime;
     private DatabaseCollectionManager databaseCollectionManager;
-    private Collection<Flat> myCollection;
+    private Vector<Flat> myCollection = new Vector<>();
 
     public CollectionManager(DatabaseCollectionManager dbclm) {
         lastSaveTime = null;
         databaseCollectionManager = dbclm;
-
-        myCollection = Collections.synchronizedCollection(temp);
 
         update();
     }
@@ -217,6 +214,10 @@ public class CollectionManager {
             return "Collection is empty";
 
         return myCollection.stream().reduce("", (sum, m) -> sum += m + "\n\n", (sum1, sum2) -> sum1 + sum2).trim();
+    }
+
+    public Vector<Flat> getCollection() {
+        return myCollection;
     }
 
     @Override

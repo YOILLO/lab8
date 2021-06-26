@@ -306,3 +306,647 @@
 14:46:35.240 [Thread-28] INFO  My logger - Начинаю сериализацию 
 14:46:35.240 [Thread-28] INFO  My logger - Сереализировал 
 14:46:35.240 [Thread-28] INFO  My logger - Отправлено 
+14:55:35.596 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+14:55:36.560 [main] INFO  My logger - Подключение установлено. 
+14:55:36.562 [main] INFO  My logger - localhost:8594 -> pg:5432 
+14:55:36.802 [main] INFO  My logger - Соединение с базой данных установлено. 
+14:55:36.824 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+14:55:36.885 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+14:55:36.915 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+14:55:36.915 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+14:55:36.915 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+14:55:36.945 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+14:55:36.945 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+14:55:36.945 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+14:55:36.974 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+14:55:36.976 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+14:55:36.976 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+14:55:36.996 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+14:55:37.004 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+14:55:37.004 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+14:55:37.026 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+14:55:37.026 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+14:55:37.026 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+14:55:37.056 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+14:55:37.056 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+14:55:37.056 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+14:55:37.086 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+14:55:37.086 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+14:55:37.086 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+14:55:37.106 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+14:55:37.115 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+14:55:37.115 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+14:55:37.137 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+14:55:37.137 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+14:55:37.137 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+14:55:37.167 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+14:55:37.167 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+14:55:37.167 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+14:55:37.177 [main] INFO  My logger - Открываю сокет 
+14:55:37.187 [main] INFO  My logger - Сокет открыт 
+14:55:37.187 [main] INFO  My logger - Ожидаю входящее сообщение 
+14:57:36.127 [main] INFO  My logger - Ожидаю входящее сообщение 
+14:57:36.142 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+14:57:36.283 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+14:57:36.283 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+14:57:36.283 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+14:57:36.283 [Thread-6] INFO  My logger - Начинаю сериализацию 
+14:57:36.293 [Thread-6] INFO  My logger - Сереализировал 
+14:57:36.293 [Thread-6] INFO  My logger - Отправлено 
+14:57:40.711 [main] INFO  My logger - Ожидаю входящее сообщение 
+14:57:40.711 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+14:57:40.742 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+14:57:40.742 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+14:57:40.742 [Thread-7] INFO  My logger - ���������� ������� show 
+14:57:40.796 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+14:57:40.796 [Thread-8] INFO  My logger - Начинаю сериализацию 
+14:57:40.796 [Thread-8] INFO  My logger - Сереализировал 
+14:57:40.796 [Thread-8] INFO  My logger - Отправлено 
+14:57:53.010 [main] INFO  My logger - Ожидаю входящее сообщение 
+14:57:53.010 [Thread-9] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+14:57:53.195 [Thread-9] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+14:57:53.195 [Thread-9] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+14:57:53.195 [Thread-9] INFO  My logger - ���������� ������� info 
+14:57:53.195 [Thread-10] INFO  My logger - Начинаю отправку ответа 
+14:57:53.195 [Thread-10] INFO  My logger - Начинаю сериализацию 
+14:57:53.195 [Thread-10] INFO  My logger - Сереализировал 
+14:57:53.195 [Thread-10] INFO  My logger - Отправлено 
+18:16:33.465 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:16:35.733 [main] INFO  My logger - Подключение установлено. 
+18:16:35.749 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:16:36.018 [main] INFO  My logger - Соединение с базой данных установлено. 
+18:16:36.049 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+18:16:36.118 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:16:36.150 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:16:36.150 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:16:36.150 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:16:36.187 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:16:36.187 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+18:16:36.187 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:16:36.203 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:16:36.219 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:16:36.219 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:16:36.250 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:16:36.250 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+18:16:36.250 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:16:36.272 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:16:36.288 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:16:36.288 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:16:36.303 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:16:36.303 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:16:36.303 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:16:36.335 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:16:36.335 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+18:16:36.335 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:16:36.372 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:16:36.372 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:16:36.372 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:16:36.394 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:16:36.394 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+18:16:36.394 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:16:36.425 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:16:36.425 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:16:36.425 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+18:16:36.435 [main] INFO  My logger - Открываю сокет 
+18:16:36.445 [main] INFO  My logger - Сокет открыт 
+18:16:36.445 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:17:06.469 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:17:06.469 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:17:06.784 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:17:06.784 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:17:06.786 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+18:17:06.786 [Thread-6] INFO  My logger - Начинаю сериализацию 
+18:17:06.794 [Thread-6] INFO  My logger - Сереализировал 
+18:17:06.794 [Thread-6] INFO  My logger - Отправлено 
+18:18:23.867 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:18:23.867 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:18:23.898 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:18:23.898 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:18:23.898 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+18:18:23.898 [Thread-8] INFO  My logger - Начинаю сериализацию 
+18:18:23.898 [Thread-8] INFO  My logger - Сереализировал 
+18:18:23.898 [Thread-8] INFO  My logger - Отправлено 
+18:18:49.691 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:18:49.691 [Thread-9] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:18:49.707 [Thread-9] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:18:49.707 [Thread-9] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:18:49.723 [Thread-10] INFO  My logger - Начинаю отправку ответа 
+18:18:49.723 [Thread-10] INFO  My logger - Начинаю сериализацию 
+18:18:49.723 [Thread-10] INFO  My logger - Сереализировал 
+18:18:49.723 [Thread-10] INFO  My logger - Отправлено 
+18:20:45.600 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:20:45.616 [Thread-11] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:20:45.831 [Thread-11] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:20:45.831 [Thread-11] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:20:45.831 [Thread-12] INFO  My logger - Начинаю отправку ответа 
+18:20:45.831 [Thread-12] INFO  My logger - Начинаю сериализацию 
+18:20:45.831 [Thread-12] INFO  My logger - Сереализировал 
+18:20:45.831 [Thread-12] INFO  My logger - Отправлено 
+19:22:47.183 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+19:22:48.193 [main] INFO  My logger - Подключение установлено. 
+19:22:48.208 [main] INFO  My logger - localhost:8594 -> pg:5432 
+19:22:48.424 [main] INFO  My logger - Соединение с базой данных установлено. 
+19:22:48.440 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+19:22:48.509 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+19:22:48.540 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+19:22:48.540 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+19:22:48.540 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+19:22:48.571 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+19:22:48.578 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+19:22:48.578 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+19:22:48.594 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+19:22:48.594 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+19:22:48.594 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+19:22:48.625 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+19:22:48.625 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+19:22:48.625 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+19:22:48.656 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+19:22:48.656 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+19:22:48.656 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+19:22:48.678 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+19:22:48.678 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+19:22:48.678 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+19:22:48.710 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+19:22:48.710 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+19:22:48.710 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+19:22:48.725 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+19:22:48.725 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+19:22:48.725 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+19:22:48.756 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+19:22:48.756 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+19:22:48.756 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+19:22:48.779 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+19:22:48.779 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+19:22:48.779 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+19:22:48.810 [main] INFO  My logger - Открываю сокет 
+19:22:48.810 [main] INFO  My logger - Сокет открыт 
+19:22:48.810 [main] INFO  My logger - Ожидаю входящее сообщение 
+19:23:13.322 [main] INFO  My logger - Ожидаю входящее сообщение 
+19:23:13.322 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ?'. 
+19:23:13.354 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME. 
+19:23:13.354 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin''. 
+19:23:13.354 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+19:23:13.354 [Thread-6] INFO  My logger - Начинаю сериализацию 
+19:23:13.354 [Thread-6] INFO  My logger - Сереализировал 
+19:23:13.354 [Thread-6] INFO  My logger - Отправлено 
+19:23:14.414 [main] INFO  My logger - Ожидаю входящее сообщение 
+19:23:14.414 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+19:23:14.452 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+19:23:14.452 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+19:23:14.452 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+19:23:14.452 [Thread-8] INFO  My logger - Начинаю сериализацию 
+19:23:14.452 [Thread-8] INFO  My logger - Сереализировал 
+19:23:14.452 [Thread-8] INFO  My logger - Отправлено 
+19:23:55.093 [main] INFO  My logger - Ожидаю входящее сообщение 
+19:23:55.093 [Thread-9] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+19:23:55.109 [Thread-9] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+19:23:55.109 [Thread-9] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+19:23:55.109 [Thread-10] INFO  My logger - Начинаю отправку ответа 
+19:23:55.109 [Thread-10] INFO  My logger - Начинаю сериализацию 
+19:23:55.109 [Thread-10] INFO  My logger - Сереализировал 
+19:23:55.109 [Thread-10] INFO  My logger - Отправлено 
+19:35:40.715 [main] INFO  My logger - Ожидаю входящее сообщение 
+19:35:40.719 [Thread-11] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+19:35:40.751 [Thread-11] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+19:35:40.751 [Thread-11] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+19:35:40.751 [Thread-12] INFO  My logger - Начинаю отправку ответа 
+19:35:40.751 [Thread-12] INFO  My logger - Начинаю сериализацию 
+19:35:40.755 [Thread-12] INFO  My logger - Сереализировал 
+19:35:40.755 [Thread-12] INFO  My logger - Отправлено 
+20:18:58.920 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+20:18:59.797 [main] INFO  My logger - Подключение установлено. 
+20:18:59.805 [main] INFO  My logger - localhost:8594 -> pg:5432 
+20:19:00.034 [main] INFO  My logger - Соединение с базой данных установлено. 
+20:19:00.056 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+20:19:00.118 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+20:19:00.134 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+20:19:00.134 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+20:19:00.134 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+20:19:00.172 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+20:19:00.172 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+20:19:00.172 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+20:19:00.203 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+20:19:00.203 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+20:19:00.203 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+20:19:00.219 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+20:19:00.219 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+20:19:00.219 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+20:19:00.256 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+20:19:00.256 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+20:19:00.256 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+20:19:00.288 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+20:19:00.288 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+20:19:00.288 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+20:19:00.303 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+20:19:00.303 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+20:19:00.303 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+20:19:00.335 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+20:19:00.335 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+20:19:00.335 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+20:19:00.357 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+20:19:00.357 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+20:19:00.357 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+20:19:00.388 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+20:19:00.388 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+20:19:00.388 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+20:19:00.404 [main] INFO  My logger - Открываю сокет 
+20:19:00.419 [main] INFO  My logger - Сокет открыт 
+20:19:00.419 [main] INFO  My logger - Ожидаю входящее сообщение 
+20:19:26.677 [main] INFO  My logger - Ожидаю входящее сообщение 
+20:19:26.677 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+20:19:26.708 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+20:19:26.708 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+20:19:26.724 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+20:19:26.724 [Thread-6] INFO  My logger - Начинаю сериализацию 
+20:19:26.724 [Thread-6] INFO  My logger - Сереализировал 
+20:19:26.724 [Thread-6] INFO  My logger - Отправлено 
+20:23:07.945 [main] INFO  My logger - Ожидаю входящее сообщение 
+20:23:07.945 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+20:23:07.983 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+20:23:07.983 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+20:23:07.983 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+20:23:07.983 [Thread-8] INFO  My logger - Начинаю сериализацию 
+20:23:07.983 [Thread-8] INFO  My logger - Сереализировал 
+20:23:07.983 [Thread-8] INFO  My logger - Отправлено 
+20:23:09.195 [main] INFO  My logger - Ожидаю входящее сообщение 
+20:23:09.195 [Thread-9] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+20:23:09.226 [Thread-9] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+20:23:09.237 [Thread-9] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+20:23:09.238 [Thread-9] INFO  My logger - ���������� ������� get_collection 
+20:23:09.239 [Thread-10] INFO  My logger - Начинаю отправку ответа 
+20:23:09.244 [Thread-10] INFO  My logger - Начинаю сериализацию 
+20:23:09.273 [Thread-10] INFO  My logger - Сереализировал 
+20:23:09.274 [Thread-10] INFO  My logger - Отправлено 
+20:23:13.971 [main] INFO  My logger - Ожидаю входящее сообщение 
+20:23:13.971 [Thread-11] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+20:23:14.203 [Thread-11] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+20:23:14.203 [Thread-11] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+20:23:14.203 [Thread-11] INFO  My logger - ���������� ������� get_collection 
+20:23:14.203 [Thread-12] INFO  My logger - Начинаю отправку ответа 
+20:23:14.203 [Thread-12] INFO  My logger - Начинаю сериализацию 
+20:23:14.203 [Thread-12] INFO  My logger - Сереализировал 
+20:23:14.203 [Thread-12] INFO  My logger - Отправлено 
+17:56:03.244 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+17:56:04.300 [main] INFO  My logger - Подключение установлено. 
+17:56:04.309 [main] INFO  My logger - localhost:8594 -> pg:5432 
+17:56:04.493 [main] INFO  My logger - Соединение с базой данных установлено. 
+17:56:04.515 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+17:56:04.551 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+17:56:04.558 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+17:56:04.559 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+17:56:04.560 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+17:56:04.565 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+17:56:04.566 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+17:56:04.567 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+17:56:04.572 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+17:56:04.573 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+17:56:04.573 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+17:56:04.580 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+17:56:04.581 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+17:56:04.582 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+17:56:04.586 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+17:56:04.588 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+17:56:04.590 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+17:56:04.595 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+17:56:04.595 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+17:56:04.595 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+17:56:04.599 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+17:56:04.600 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+17:56:04.601 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+17:56:04.606 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+17:56:04.607 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+17:56:04.607 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+17:56:04.617 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+17:56:04.618 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+17:56:04.619 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+17:56:04.623 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+17:56:04.623 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+17:56:04.623 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+17:56:04.636 [main] INFO  My logger - Открываю сокет 
+17:56:04.649 [main] INFO  My logger - Сокет открыт 
+17:56:04.650 [main] INFO  My logger - Ожидаю входящее сообщение 
+17:56:34.780 [main] INFO  My logger - Ожидаю входящее сообщение 
+17:56:34.782 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+17:56:34.793 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+17:56:34.793 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+17:56:34.795 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+17:56:34.796 [Thread-6] INFO  My logger - Начинаю сериализацию 
+17:56:34.803 [Thread-6] INFO  My logger - Сереализировал 
+17:56:34.805 [Thread-6] INFO  My logger - Отправлено 
+17:56:36.264 [main] INFO  My logger - Ожидаю входящее сообщение 
+17:56:36.273 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+17:56:36.292 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+17:56:36.293 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+17:56:36.296 [Thread-7] INFO  My logger - ���������� ������� get_collection 
+17:56:36.299 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+17:56:36.306 [Thread-8] INFO  My logger - Начинаю сериализацию 
+17:56:36.347 [Thread-8] INFO  My logger - Сереализировал 
+17:56:36.349 [Thread-8] INFO  My logger - Отправлено 
+18:03:42.054 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:03:42.605 [main] INFO  My logger - Подключение установлено. 
+18:03:42.616 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:03:42.787 [main] INFO  My logger - Соединение с базой данных установлено. 
+18:03:42.809 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+18:03:42.843 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:03:42.851 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:03:42.852 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:03:42.852 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:03:42.858 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:03:42.860 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+18:03:42.860 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:03:42.865 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:03:42.866 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:03:42.866 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:03:42.871 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:03:42.873 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+18:03:42.873 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:03:42.878 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:03:42.879 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:03:42.882 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:03:42.886 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:03:42.887 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:03:42.887 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:03:42.891 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:03:42.892 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+18:03:42.892 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:03:42.897 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:03:42.897 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:03:42.898 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:03:42.902 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:03:42.902 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+18:03:42.903 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:03:42.907 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:03:42.907 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:03:42.907 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+18:03:42.918 [main] INFO  My logger - Открываю сокет 
+18:03:42.932 [main] INFO  My logger - Сокет открыт 
+18:03:42.933 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:04:15.527 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:04:15.529 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:04:15.539 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:04:15.540 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:04:15.541 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+18:04:15.542 [Thread-6] INFO  My logger - Начинаю сериализацию 
+18:04:15.549 [Thread-6] INFO  My logger - Сереализировал 
+18:04:15.550 [Thread-6] INFO  My logger - Отправлено 
+18:04:17.142 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:04:17.143 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:04:17.162 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:04:17.163 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:04:17.164 [Thread-7] INFO  My logger - ���������� ������� get_collection 
+18:04:17.165 [Thread-7] INFO  My logger - Пользователь запросил всю коллекцию 
+18:04:17.180 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+18:04:17.181 [Thread-8] INFO  My logger - Начинаю сериализацию 
+18:04:17.206 [Thread-8] INFO  My logger - Сереализировал 
+18:04:17.209 [Thread-8] INFO  My logger - Отправлено 
+18:07:07.939 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:07:08.466 [main] INFO  My logger - Подключение установлено. 
+18:07:08.475 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:07:08.647 [main] INFO  My logger - Соединение с базой данных установлено. 
+18:07:08.668 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+18:07:08.711 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:07:08.718 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:07:08.719 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:07:08.720 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:07:08.725 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:07:08.726 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+18:07:08.727 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:07:08.732 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:07:08.732 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:07:08.733 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:07:08.738 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:07:08.739 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+18:07:08.740 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:07:08.745 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:07:08.746 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:07:08.748 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:07:08.768 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:07:08.768 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:07:08.769 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:07:08.773 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:07:08.773 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+18:07:08.774 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:07:08.778 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:07:08.779 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:07:08.779 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:07:08.797 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:07:08.798 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+18:07:08.798 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:07:08.836 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:07:08.837 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:07:08.837 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+18:07:08.848 [main] INFO  My logger - Открываю сокет 
+18:07:08.856 [main] INFO  My logger - Сокет открыт 
+18:07:08.857 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:07:39.872 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:07:39.873 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:07:39.884 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:07:39.884 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:07:39.886 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+18:07:39.886 [Thread-6] INFO  My logger - Начинаю сериализацию 
+18:07:39.893 [Thread-6] INFO  My logger - Сереализировал 
+18:07:39.894 [Thread-6] INFO  My logger - Отправлено 
+18:07:41.331 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:07:41.333 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:07:41.339 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:07:41.340 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:07:41.344 [Thread-7] INFO  My logger - ���������� ������� get_collection 
+18:07:41.344 [Thread-7] INFO  My logger - Пользователь запросил всю коллекцию 
+18:07:41.350 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+18:07:41.351 [Thread-8] INFO  My logger - Начинаю сериализацию 
+18:07:41.395 [Thread-8] INFO  My logger - Сереализировал 
+18:07:41.396 [Thread-8] INFO  My logger - Отправлено 
+18:11:18.721 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:11:19.232 [main] INFO  My logger - Подключение установлено. 
+18:11:19.240 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:11:19.405 [main] INFO  My logger - Соединение с базой данных установлено. 
+18:11:19.426 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+18:11:19.459 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:11:19.464 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:11:19.465 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:11:19.466 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:11:19.470 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:11:19.472 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+18:11:19.472 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:11:19.477 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:11:19.478 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:11:19.478 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:11:19.482 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:11:19.484 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+18:11:19.484 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:11:19.489 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:11:19.491 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:11:19.492 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:11:19.497 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:11:19.497 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:11:19.498 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:11:19.502 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:11:19.502 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+18:11:19.503 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:11:19.507 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:11:19.508 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:11:19.508 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:11:19.512 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:11:19.513 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+18:11:19.513 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:11:19.517 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:11:19.517 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:11:19.517 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+18:11:19.535 [main] INFO  My logger - Открываю сокет 
+18:11:19.544 [main] INFO  My logger - Сокет открыт 
+18:11:19.544 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:11:53.759 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:11:53.761 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:11:53.770 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:11:53.770 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:11:53.772 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+18:11:53.773 [Thread-6] INFO  My logger - Начинаю сериализацию 
+18:11:53.780 [Thread-6] INFO  My logger - Сереализировал 
+18:11:53.781 [Thread-6] INFO  My logger - Отправлено 
+18:11:55.686 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:11:55.689 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:11:55.698 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:11:55.704 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:11:55.709 [Thread-7] INFO  My logger - ���������� ������� get_collection 
+18:11:55.709 [Thread-7] INFO  My logger - Пользователь запросил всю коллекцию 
+18:11:55.721 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+18:11:55.724 [Thread-8] INFO  My logger - Начинаю сериализацию 
+18:11:55.768 [Thread-8] INFO  My logger - Отправляю объект 
+18:11:55.769 [Thread-8] INFO  My logger - Сереализировал 
+18:11:55.769 [Thread-8] INFO  My logger - Отправлено 
+18:13:31.807 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:13:32.335 [main] INFO  My logger - Подключение установлено. 
+18:13:32.346 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:13:32.500 [main] INFO  My logger - Соединение с базой данных установлено. 
+18:13:32.520 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+18:13:32.550 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:13:32.556 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:13:32.557 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:13:32.558 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:13:32.563 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:13:32.565 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+18:13:32.565 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:13:32.571 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:13:32.572 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:13:32.572 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:13:32.576 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:13:32.578 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+18:13:32.579 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:13:32.584 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:13:32.585 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:13:32.587 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:13:32.592 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:13:32.592 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:13:32.593 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:13:32.598 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:13:32.598 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+18:13:32.599 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:13:32.603 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:13:32.604 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:13:32.605 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:13:32.609 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:13:32.609 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+18:13:32.610 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:13:32.614 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:13:32.614 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:13:32.615 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+18:13:32.628 [main] INFO  My logger - Открываю сокет 
+18:13:32.637 [main] INFO  My logger - Сокет открыт 
+18:13:32.637 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:14:04.101 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:14:04.104 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:14:04.114 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:14:04.114 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:14:04.116 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+18:14:04.117 [Thread-6] INFO  My logger - Начинаю сериализацию 
+18:14:04.124 [Thread-6] INFO  My logger - Сереализировал 
+18:14:04.124 [Thread-6] INFO  My logger - Отправлено 
+18:14:05.576 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:14:05.581 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:14:05.597 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:14:05.597 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:14:05.600 [Thread-7] INFO  My logger - ���������� ������� get_collection 
+18:14:05.600 [Thread-7] INFO  My logger - Пользователь запросил всю коллекцию 
+18:14:05.608 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+18:14:05.609 [Thread-8] INFO  My logger - Начинаю сериализацию 
+18:14:05.641 [Thread-8] INFO  My logger - Отправляю объект 
+18:14:05.642 [Thread-8] INFO  My logger - Сереализировал 
+18:14:05.643 [Thread-8] INFO  My logger - Отправлено 
+18:26:01.223 [main] INFO  My logger - Устанавливается ssh подключение к se.ifmo.ru : 2222 
+18:26:01.747 [main] INFO  My logger - Подключение установлено. 
+18:26:01.756 [main] INFO  My logger - localhost:8594 -> pg:5432 
+18:26:01.933 [main] INFO  My logger - Соединение с базой данных установлено. 
+18:26:01.955 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat'. 
+18:26:01.991 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:26:01.998 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:26:01.999 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:26:02.000 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:26:02.005 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:26:02.006 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 2'. 
+18:26:02.007 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:26:02.012 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:26:02.013 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 1'. 
+18:26:02.013 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:26:02.018 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:26:02.020 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 2'. 
+18:26:02.020 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:26:02.025 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:26:02.026 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:26:02.028 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:26:02.033 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:26:02.033 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:26:02.033 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM coordinates WHERE id = ?'. 
+18:26:02.038 [main] INFO  My logger - Выполнен запрос SELECT_COORDINATES_BY_ID. 
+18:26:02.038 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM coordinates WHERE id = 4'. 
+18:26:02.039 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM flat WHERE id = ?'. 
+18:26:02.043 [main] INFO  My logger - Выполнен запрос SELECT_STUDY_GROUP_BY_ID. 
+18:26:02.044 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat WHERE id = 3'. 
+18:26:02.045 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM house WHERE id = ?'. 
+18:26:02.059 [main] INFO  My logger - Выполнен запрос SELECT_HOUSE_BY_ID. 
+18:26:02.060 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM house WHERE id = 4'. 
+18:26:02.061 [main] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE id = ?'. 
+18:26:02.066 [main] INFO  My logger - Выполнен запрос SELECT_USER_BY_ID. 
+18:26:02.066 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE id = 1'. 
+18:26:02.066 [main] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM flat'. 
+18:26:02.082 [main] INFO  My logger - Открываю сокет 
+18:26:02.095 [main] INFO  My logger - Сокет открыт 
+18:26:02.096 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:26:32.339 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:26:32.341 [Thread-5] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:26:32.351 [Thread-5] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:26:32.352 [Thread-5] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:26:32.354 [Thread-6] INFO  My logger - Начинаю отправку ответа 
+18:26:32.354 [Thread-6] INFO  My logger - Начинаю сериализацию 
+18:26:32.360 [Thread-6] INFO  My logger - Сереализировал 
+18:26:32.361 [Thread-6] INFO  My logger - Отправлено 
+18:26:34.191 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:26:34.192 [Thread-7] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:26:34.206 [Thread-7] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:26:34.209 [Thread-7] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:26:34.215 [Thread-7] INFO  My logger - ���������� ������� get_collection 
+18:26:34.217 [Thread-7] INFO  My logger - Пользователь запросил всю коллекцию 
+18:26:34.234 [Thread-8] INFO  My logger - Начинаю отправку ответа 
+18:26:34.236 [Thread-8] INFO  My logger - Начинаю сериализацию 
+18:26:34.272 [Thread-8] INFO  My logger - Отправляю объект 
+18:26:34.273 [Thread-8] INFO  My logger - Сереализировал 
+18:26:34.273 [Thread-8] INFO  My logger - Отправлено 
+18:28:10.882 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:28:10.883 [Thread-9] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:28:10.896 [Thread-9] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:28:10.900 [Thread-9] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:28:10.901 [Thread-9] INFO  My logger - ���������� ������� show 
+18:28:10.954 [Thread-10] INFO  My logger - Начинаю отправку ответа 
+18:28:10.954 [Thread-10] INFO  My logger - Начинаю сериализацию 
+18:28:10.955 [Thread-10] INFO  My logger - Сереализировал 
+18:28:10.955 [Thread-10] INFO  My logger - Отправлено 
+18:28:21.358 [main] INFO  My logger - Ожидаю входящее сообщение 
+18:28:21.371 [Thread-11] INFO  My logger - Подготовлен SQL запрос 'SELECT * FROM users WHERE username = ? AND password = ?'. 
+18:28:21.391 [Thread-11] INFO  My logger - Выполнен запрос SELECT_USER_BY_USERNAME_AND_PASSWORD: true 
+18:28:21.392 [Thread-11] INFO  My logger - Закрыт SQL запрос 'SELECT * FROM users WHERE username = 'admin' AND password = '81dc9bdb52d04dc20036dbd8313ed055''. 
+18:28:21.392 [Thread-11] INFO  My logger - ���������� ������� get_collection 
+18:28:21.392 [Thread-11] INFO  My logger - Пользователь запросил всю коллекцию 
+18:28:21.395 [Thread-12] INFO  My logger - Начинаю отправку ответа 
+18:28:21.396 [Thread-12] INFO  My logger - Начинаю сериализацию 
+18:28:21.398 [Thread-12] INFO  My logger - Отправляю объект 
+18:28:21.399 [Thread-12] INFO  My logger - Сереализировал 
+18:28:21.400 [Thread-12] INFO  My logger - Отправлено 

@@ -1,5 +1,6 @@
 package commands;
 
+import collection.CollectionManager;
 import database_managers.DatabaseUserManager;
 import io.ScriptManager;
 import main.Main;
@@ -20,8 +21,12 @@ public class CommandManager {
     private List<commands.AbstractCommand> commands= new ArrayList<>();
     private Stack<String> files = new Stack<>();
     private DatabaseUserManager databaseUserManager;
+    private CollectionManager collectionManager;
 
-    public CommandManager(commands.AbstractCommand[] com, DatabaseUserManager dbum){
+
+    public CommandManager(commands.AbstractCommand[] com, DatabaseUserManager dbum, CollectionManager coll){
+
+        collectionManager = coll;
 
         files.clear();
 
@@ -61,7 +66,11 @@ public class CommandManager {
                 answerMsg.addError("\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C file_name");
             }
         }
-        else {
+        else if (commandMsg.getCommand().trim().equals("get_collection")){
+            Main.logger.info("Пользователь запросил всю коллекцию");
+            answerMsg.setObj(collectionManager.getCollection());
+        }
+        else{
             for (commands.AbstractCommand comm : commands) {
                 if (comm.getName().equals(commandMsg.getCommand())) {
                     return comm.execute(commandMsg.getArg(), commandMsg.getObjArg(), answerMsg, commandMsg.getUser());

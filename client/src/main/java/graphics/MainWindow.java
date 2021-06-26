@@ -36,6 +36,14 @@ public class MainWindow extends AbstractWindow{
             }
         });
 
+        visualMode.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                VisualMode visualMode = new VisualMode(client, getMe(), getBounds());
+                setVisible(false);
+            }
+        });
+
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(3, 3));
 

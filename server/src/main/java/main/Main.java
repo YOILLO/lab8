@@ -40,7 +40,7 @@ public class Main {
                 new InfoCom(collection), new ShowCom(collection),
                 new RemoveLastCom(collection), new RemoveById(collection),
                 new RemoveGreaterCom(collection), new UpdateIDCom(collection),
-                new SaveCom(collection)}, databaseUserManager);
+                new SaveCom(collection)}, databaseUserManager, collection);
         Server server = new Server(1812, commandManager, databaseUserManager);
 
         Runnable save = () -> {

@@ -52,12 +52,22 @@ public class CommandMode extends AbstractWindow{
                     String[] userCommand = {"", ""};
                     userCommand = (commandField.getText().trim() + " ").split(" ", 2);
                     Serializable obj = null;
-                    if (userCommand[0].equals("add")){
+                    commandField.setText("");
+                    if (userCommand[0].trim().equals("add")){
+                        FlatAsker flatAsker = new FlatAsker(client, "add", "");
+                    }else if (userCommand[0].trim().equals("update")){
+                        FlatAsker flatAsker = new FlatAsker(client, "update", userCommand[1]);
+                    }else if (userCommand[0].trim().equals("add_if_min")){
+                        FlatAsker flatAsker = new FlatAsker(client, "update", "");
+                    }else if (userCommand[0].trim().equals("remove_any_by_house")){
+                        HouseAsker houseAsker = new HouseAsker(client, "remove_any_by_house", "");
+                    }else if (userCommand[0].trim().equals("get_collection")){
 
+                    }else{
+                        CommandMsg commandMsg = new CommandMsg(userCommand[0], userCommand[1], obj, client.getUser());
+                        AnswerMsg answer = client.sendAndAnswer(commandMsg);
+                        answerEarea.setText(answerEarea.getText() + answer.getAnswer() + "\n");
                     }
-                    CommandMsg commandMsg = new CommandMsg(userCommand[0], userCommand[1], obj, client.getUser());
-                    AnswerMsg answer = client.sendAndAnswer(commandMsg);
-                    answerEarea.setText(answerEarea.getText() + answer.getAnswer() + "\n");
                 }
             }
         });

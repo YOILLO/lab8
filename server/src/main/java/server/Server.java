@@ -17,7 +17,7 @@ public class Server {
     private int PORT;
     private SocketAddress socketAddress;
     private DatagramChannel datagramChannel;
-    public static int bufferSize = 1024;
+    public static int bufferSize = 4096;
     private CommandManager commandManager;
     private DatabaseUserManager databaseUserManager;
 

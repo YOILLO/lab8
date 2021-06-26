@@ -6,9 +6,11 @@ public class AnswerMsg implements Serializable {
 
     String answer;
     Status status;
+    Serializable obj;
 
     public AnswerMsg(){
         answer = "";
+        obj = null;
     }
 
     public void addMsg(String msg){
@@ -31,4 +33,11 @@ public class AnswerMsg implements Serializable {
         return status;
     }
 
+    public Serializable getObj() {
+        return obj;
+    }
+
+    public void setObj(Serializable obj) {
+        this.obj = obj;
+    }
 }
