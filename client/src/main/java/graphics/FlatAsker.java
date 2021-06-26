@@ -3,6 +3,7 @@ package graphics;
 import client.Client;
 
 import data.*;
+import io.Console;
 import messages.*;
 
 import javax.swing.*;
@@ -93,7 +94,7 @@ public class FlatAsker extends AbstractWindow{
 
                 float y = -1;
                 try{
-                    y = Float.parseFloat(xField.getText().trim());
+                    y = Float.parseFloat(yField.getText().trim());
                     yLabel.setForeground(Color.green);
                 }catch(NullPointerException|NumberFormatException exc){
                     canSand = false;
@@ -156,7 +157,7 @@ public class FlatAsker extends AbstractWindow{
 
                 long year = -1;
                 try{
-                    year = Long.getLong(houseYearField.getText().trim());
+                    year = Long.parseLong(houseYearField.getText().trim());
                     houseYearLabel.setForeground(Color.green);
                 }catch (NullPointerException|NumberFormatException exc){
                     canSand = false;
@@ -165,7 +166,7 @@ public class FlatAsker extends AbstractWindow{
 
                 long numberOfFloors = -1;
                 try{
-                    numberOfFloors = Long.getLong(numberOfFloorsField.getText().trim());
+                    numberOfFloors = Long.parseLong(numberOfFloorsField.getText().trim());
                     numberOfFloorsLabel.setForeground(Color.green);
                 }catch (NullPointerException|NumberFormatException exc){
                     canSand = false;
@@ -176,6 +177,7 @@ public class FlatAsker extends AbstractWindow{
                             new House(houseName, year, numberOfFloors));
                     CommandMsg commandMsg = new CommandMsg(command, arg, rowFlat, client.getUser());
                     AnswerMsg answer = client.sendAndAnswer(commandMsg);
+                    close();
                 }
             }
         });

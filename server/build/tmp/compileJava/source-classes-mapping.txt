@@ -13,8 +13,8 @@ server/Tunnel.java
  server.Tunnel$localUserInfo
 commands/RemoveLastCom.java
  commands.RemoveLastCom
-commands/CommandManager.java
- commands.CommandManager
+server/AnswerHandler.java
+ server.AnswerHandler
 collection/CollectionManager.java
  collection.CollectionManager
 commands/SaveCom.java
@@ -47,9 +47,9 @@ commands/ClearCom.java
  commands.ClearCom
 server/RequestHandler.java
  server.RequestHandler
-server/AnswerHandler.java
- server.AnswerHandler
 server/Server.java
  server.Server
 main/Main.java
  main.Main
+commands/CommandManager.java
+ commands.CommandManager

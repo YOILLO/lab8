@@ -17,7 +17,7 @@ public class CollectionManager {
     private java.time.LocalDateTime lastInitTime;
     private java.time.LocalDateTime lastSaveTime;
     private DatabaseCollectionManager databaseCollectionManager;
-    private Vector<Flat> myCollection = new Vector<>();
+    private ArrayList<Flat> myCollection = new ArrayList<>();
 
     public CollectionManager(DatabaseCollectionManager dbclm) {
         lastSaveTime = null;
@@ -216,7 +216,7 @@ public class CollectionManager {
         return myCollection.stream().reduce("", (sum, m) -> sum += m + "\n\n", (sum1, sum2) -> sum1 + sum2).trim();
     }
 
-    public Vector<Flat> getCollection() {
+    public ArrayList<Flat> getCollection() {
         return myCollection;
     }
 

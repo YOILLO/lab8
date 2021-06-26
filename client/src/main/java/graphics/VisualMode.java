@@ -23,8 +23,8 @@ public class VisualMode extends AbstractWindow{
     private JLabel legendLabel = new JLabel();
     private JTextArea InfoEarea = new JTextArea();
     private JLabel msg = new JLabel();
-    private Vector<Flat> collection;
-    private Vector<Flat> oldCollection;
+    private ArrayList<Flat> collection;
+    private ArrayList<Flat> oldCollection;
 
     private MainWindow mainWindow;
     private Client client;
@@ -64,6 +64,7 @@ public class VisualMode extends AbstractWindow{
             public void actionPerformed(ActionEvent e) {
                 mainWindow.setVisible(true);
                 mainWindow.setLocal();
+                mainWindow.setBounds(getBounds());
                 close();
             }
         });
@@ -88,11 +89,11 @@ public class VisualMode extends AbstractWindow{
 
                 CommandMsg commandMsg = new CommandMsg("get_collection", "", null, client.getUser());
                 AnswerMsg ans = client.sendAndAnswer(commandMsg);
-                if (ans.getObj() == null) {
+                if (ans == null) {
                     Console.println("Received error");
                     continue;
                 }
-                collection = (Vector<Flat>) ans.getObj();
+                collection = ans.getObj();
                 if (!collection.equals(oldCollection) || !this.getBounds().equals(oldRec)) {
                     synchronized (this) {
                         ArrayList<String> users = new ArrayList<>();
@@ -105,7 +106,7 @@ public class VisualMode extends AbstractWindow{
                                 users.add(flat.getUser().getUsername().trim());
                             }
                             graphics.setColor(colorFromString(flat.getUser().getUsername()));
-                            graphics.fillRect((int) flat.getCoordinates().getX(), (int)flat.getCoordinates().getY(), 5, 5);
+                            graphics.fillRect((int) flat.getCoordinates().getX(), (int)flat.getCoordinates().getY(), flat.getPrice().intValue()/500000, flat.getPrice().intValue()/500000);
                         }
                         map.revalidate();
                         legnd.removeAll();
@@ -132,7 +133,8 @@ public class VisualMode extends AbstractWindow{
 
     @Override
     protected void setLocal() {
-
+        returnButtn.setText(locals.getProperty("return_button", "local error"));
+        legendLabel.setText(locals.getProperty("legend_label", "local_error"));
     }
     public Color colorFromString(String str){
         byte[] bytes = str.getBytes();

@@ -41,6 +41,7 @@ public class CommandMode extends AbstractWindow{
             public void actionPerformed(ActionEvent e) {
                 mainWindow.setVisible(true);
                 mainWindow.setLocal();
+                mainWindow.setBounds(getBounds());
                 close();
             }
         });

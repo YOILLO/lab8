@@ -71,7 +71,7 @@ public class CommandManager {
             answerMsg.setObj(collectionManager.getCollection());
         }
         else{
-            for (commands.AbstractCommand comm : commands) {
+            for (AbstractCommand comm : commands) {
                 if (comm.getName().equals(commandMsg.getCommand())) {
                     return comm.execute(commandMsg.getArg(), commandMsg.getObjArg(), answerMsg, commandMsg.getUser());
                 }

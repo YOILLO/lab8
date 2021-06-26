@@ -53,7 +53,7 @@ public class HouseAsker extends AbstractWindow{
 
                 long year = -1;
                 try{
-                    year = Long.getLong(houseYearField.getText().trim());
+                    year = Long.parseLong(houseYearField.getText().trim());
                     houseYearLabel.setForeground(Color.green);
                 }catch (NullPointerException|NumberFormatException exc){
                     canSand = false;
@@ -62,7 +62,7 @@ public class HouseAsker extends AbstractWindow{
 
                 long numberOfFloors = -1;
                 try{
-                    numberOfFloors = Long.getLong(numberOfFloorsField.getText().trim());
+                    numberOfFloors = Long.parseLong(numberOfFloorsField.getText().trim());
                     numberOfFloorsLabel.setForeground(Color.green);
                 }catch (NullPointerException|NumberFormatException exc){
                     canSand = false;
@@ -72,6 +72,7 @@ public class HouseAsker extends AbstractWindow{
                     House house = new House(houseName, year, numberOfFloors);
                     CommandMsg commandMsg = new CommandMsg(command, arg, house, client.getUser());
                     AnswerMsg answer = client.sendAndAnswer(commandMsg);
+                    close();
                 }
             }
         });

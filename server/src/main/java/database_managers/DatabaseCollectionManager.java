@@ -8,6 +8,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class DatabaseCollectionManager {
@@ -336,8 +337,8 @@ public class DatabaseCollectionManager {
         }
     }
 
-    public Vector<Flat> getCollection(){
-        Vector<Flat> buffCollection = new Vector<Flat>();
+    public ArrayList<Flat> getCollection(){
+        ArrayList<Flat> buffCollection = new ArrayList<>();
         PreparedStatement preparedSelectAllStatement = null;
         try {
             preparedSelectAllStatement = databaseManager.getPreparedStatement(SELECT_ALL_FLATS, false);
@@ -423,7 +424,7 @@ public class DatabaseCollectionManager {
     }
 
     public void clearCollection(User chager) {
-        Vector<Flat> list = getCollection();
+        ArrayList<Flat> list = getCollection();
         for (Flat flat : list) {
             if (chager.getUsername().equals(flat.getUser().getUsername()))
                 deleteFlatById(flat.getId());

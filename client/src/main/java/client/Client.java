@@ -23,7 +23,7 @@ public class Client {
     private String ADDR;
     private SocketAddress socketAddress;
     private DatagramSocket datagramSocket;
-    private final int bufferSize = 1024;
+    private final int bufferSize = 4096;
     private int TIMEOUT;
     private Console console;
     private Scanner scanner;

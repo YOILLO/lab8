@@ -44,6 +44,14 @@ public class MainWindow extends AbstractWindow{
             }
         });
 
+        tableMode.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TableWindow tableWindow = new TableWindow(client, getMe(), getBounds());
+                setVisible(false);
+            }
+        });
+
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(3, 3));
 

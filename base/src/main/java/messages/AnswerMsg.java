@@ -1,12 +1,16 @@
 package messages;
 
+import data.Flat;
+
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Vector;
 
 public class AnswerMsg implements Serializable {
 
     String answer;
     Status status;
-    Serializable obj;
+    ArrayList<Flat> obj;
 
     public AnswerMsg(){
         answer = "";
@@ -33,11 +37,11 @@ public class AnswerMsg implements Serializable {
         return status;
     }
 
-    public Serializable getObj() {
+    public ArrayList<Flat> getObj() {
         return obj;
     }
 
-    public void setObj(Serializable obj) {
+    public void setObj(ArrayList<Flat> obj) {
         this.obj = obj;
     }
 }

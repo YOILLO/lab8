@@ -6,28 +6,37 @@ graphics/AbstractWindow.java
  graphics.AbstractWindow$SetItListener
  graphics.AbstractWindow$SetRoListener
  graphics.AbstractWindow$SetRuListener
+client/Client.java
+ client.Client
 graphics/FlatAsker.java
  graphics.FlatAsker
  graphics.FlatAsker$1
-client/Client.java
- client.Client
+graphics/TablePattern.java
+ graphics.TablePattern
+main/Main.java
+ main.Main
 graphics/HouseAsker.java
  graphics.HouseAsker
  graphics.HouseAsker$1
-main/Main.java
- main.Main
+graphics/LoginWindow.java
+ graphics.LoginWindow
+ graphics.LoginWindow$1
 graphics/CommandMode.java
  graphics.CommandMode
  graphics.CommandMode$1
  graphics.CommandMode$2
-graphics/LoginWindow.java
- graphics.LoginWindow
- graphics.LoginWindow$1
-graphics/MainWindow.java
- graphics.MainWindow
- graphics.MainWindow$1
- graphics.MainWindow$2
 graphics/VisualMode.java
  graphics.VisualMode
  graphics.VisualMode$1
  graphics.VisualMode$PanelMous
+graphics/TableWindow.java
+ graphics.TableWindow
+ graphics.TableWindow$1
+ graphics.TableWindow$2
+ graphics.TableWindow$3
+ graphics.TableWindow$4
+graphics/MainWindow.java
+ graphics.MainWindow
+ graphics.MainWindow$1
+ graphics.MainWindow$2
+ graphics.MainWindow$3
